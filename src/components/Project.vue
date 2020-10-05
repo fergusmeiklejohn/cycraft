@@ -4,7 +4,7 @@
             <span class="text-white uppercase text-xs tracking-widest">{{title}}</span>
             <div class="line"></div>
         </div>
-        <div class="relative mx-auto max-w-sm max-h-sm mt-3" style="padding-bottom: 100%">
+        <div class="relative mx-auto mt-3" style="padding-bottom: 100%">
             <img class="absolute h-full w-full object-cover" src="../assets/martin.jpg" alt="Project Photo">
         </div>
     </div>
