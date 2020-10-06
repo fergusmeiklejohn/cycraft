@@ -1,7 +1,7 @@
 <template>
   <div class="flex-col">
     <div class="title-container">
-      <span class="text-white uppercase text-xs tracking-widest">{{
+      <span class="text-white uppercase text-xs sm:text-sm tracking-widest">{{
         title
       }}</span>
       <div class="line"></div>
