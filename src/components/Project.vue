@@ -1,25 +1,21 @@
 <template>
-    <div class="flex-col">     
-        <div class="title-container">
-            <span class="text-white uppercase text-xs tracking-widest">{{title}}</span>
-            <div class="line"></div>
-        </div>
-        <div class="relative mx-auto mt-3" style="padding-bottom: 100%">
-            <img class="absolute h-full w-full object-cover" src="../assets/martin.jpg" alt="Project Photo">
-        </div>
+  <div class="flex-col">
+    <div class="title-container">
+      <span class="text-white uppercase text-xs tracking-widest">{{
+        title
+      }}</span>
+      <div class="line"></div>
     </div>
-
+    <div class="relative mx-auto mt-3" style="padding-bottom: 100%">
+      <img
+        class="absolute h-full w-full object-cover"
+        src="../assets/martin.jpg"
+        alt="Project Photo"
+      />
+    </div>
+  </div>
 </template>
 <style lang="sass" scoped>
-//$
-// .text-md
-//   +t-h5()
-//   color: #fff
-// .text-sm
-//   +t-h5()
-//   color: #fff
-//   font-size: 11px
-//   line-height: 15px
 .title-container
   display: flex
   align-items: center
@@ -38,13 +34,13 @@ export default {
       default: false,
     },
     title: {
-        type: String,
-        default: ''
+      type: String,
+      default: '',
     },
     img: {
-        type: String,
-      default: ''
-    }
+      type: String,
+      default: '',
+    },
   },
 }
 </script>
