@@ -159,17 +159,25 @@
       </div>
       <!-- About Us -->
       <div class="mx-10 pb-64">
-        <div class="text-xl font-light text-white tracking-wide">About Us</div>
+        <div
+          class="text-xl sm:text-2xl font-light sm:font-normal text-white tracking-wide"
+        >
+          About Us
+        </div>
         <AboutUs
           name="Luca Ban"
           bio="Has been a technology enthusiast since birth. He thinks of writing code as nothing less than poetry. Believes everything is possible - talent is a skill you teach yourself."
           twitter="#"
           github="#"
+          class="sm:w-3/4 sm:mt-10"
         />
-        <AboutUs
-          name="Tadaki Matsushita"
-          bio="Self taught coder. He has helped companies all over Japan turn their vision into code. Excels at web marketing; and currently loves automation."
-        />
+        <div class="flex justify-end">
+          <AboutUs
+            name="Tadaki Matsushita"
+            bio="Self taught coder. He has helped companies all over Japan turn their vision into code. Excels at web marketing; and currently loves automation."
+            class="sm:w-3/4 sm:mt-10"
+          />
+        </div>
       </div>
       <!-- Contact Us logo -->
       <div class="mx-10 mt-20 pb-8">

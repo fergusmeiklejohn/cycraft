@@ -2,7 +2,7 @@
   <div class="flex-col mt-8 pb-8">
     <div class="flex items-center">
       <div
-        class="text-white uppercase text-sm tracking-widest"
+        class="text-white uppercase text-sm sm:text-base tracking-widest"
         style="white-space: nowrap"
       >
         {{ name }}
@@ -11,12 +11,14 @@
     </div>
     <div class="flex mt-2">
       <img
-        class="w-10 h-10 rounded-full mr-4"
+        class="w-10 h-10 sm:w-56 sm:h-56 rounded-full mr-4"
         src="../assets/martin.jpg"
         alt="Avatar"
       />
-      <div class="flex-col">
-        <p class="text-white text-sm font-light">{{ bio }}</p>
+      <div class="flex-col sm:ml-4">
+        <p class="text-white text-sm sm:text-base font-light sm:w-9/12">
+          {{ bio }}
+        </p>
         <div v-if="twitter || github" class="flex items-center mt-2">
           <a :href="twitter" class="flex items-center">
             <img
