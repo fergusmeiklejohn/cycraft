@@ -16,21 +16,21 @@
         alt="Avatar"
       />
       <div class="flex-col sm:ml-4">
-        <p class="text-white text-sm sm:text-base font-light sm:w-9/12">
+        <p class="text-body-2 text-white sm:w-9/12">
           {{ bio }}
         </p>
         <div v-if="twitter || github" class="flex items-center mt-2">
           <a :href="twitter" class="flex items-center">
             <img
-              class="h-10"
+              class="h-6"
               src="../assets/Twitter_Logo.svg"
               alt="Twitter Logo"
             />
-            <p class="text-white text-sm font-light">Twitter</p>
+            <p class="text-white text-body-2">Twitter</p>
           </a>
           <a :href="github" class="flex items-center ml-3">
-            <img class="h-6" src="../assets/Github_Mark.svg" />
-            <p class="text-white text-sm font-light ml-1">Github</p>
+            <img class="h-4" src="../assets/Github_Mark.svg" />
+            <p class="text-white text-body-2 ml-1">Github</p>
           </a>
         </div>
       </div>

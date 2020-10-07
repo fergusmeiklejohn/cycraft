@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-black">
+  <div id="app" class="bg-black flex justify-center">
     <CyCraftHomePage />
   </div>
 </template>

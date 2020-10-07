@@ -7,22 +7,7 @@
       <!-- Mobile Header -->
       <div class="sm:hidden flex content-center justify-between p-3">
         <div class="flex items-center">
-          <svg
-            id="Monster"
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="23.721"
-            viewBox="0 0 28 23.721"
-          >
-            <g id="Layer_1" data-name="Layer 1">
-              <path
-                id="Path_18"
-                data-name="Path 18"
-                d="M18.665,4.665V0h-14V4.665H0v14H4.665v5.056H9.721V18.665H14v5.056h5.056V18.665H28v-14Zm-4.274,9.726H9.721V9.721h4.67Zm8.944,0h-4.67V9.721h4.67Z"
-                fill="#fff"
-              />
-            </g>
-          </svg>
+          <Monster />
         </div>
         <!-- <button class="text-xl text-white" @click="clicked">Contact</button> -->
       </div>
@@ -38,38 +23,24 @@
         </div>
         <!-- Title Text & Button-->
         <div
-          class="flex-col justify-center content-center p-10 pb-10 sm:mt-6 sm:mr-4 sm:max-w-md"
+          class="flex-col justify-center content-center p-10 pb-10 mt-16 sm:mr-4 sm:max-w-md"
         >
-          <div class="text-h1 text-white">We Craft without cruft.</div>
-          <div class="text-xl font-regular tracking-wide text-white pt-6">
+          <div class="text-h1 sm:text-h2 text-white">
+            We Craft without cruft.
+          </div>
+          <div class="text-h4 text-white pt-6">
             We craft beautiful apps and strive for a better web.
           </div>
-          <button
-            class="bg-white hover:bg-gray-400 text-black font-bold text-base uppercase py-3 px-4 inline-flex items-center my-20"
-            @click="clicked"
-          >
-            <svg
-              class="fill-current w-5 h-4 mr-2"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 13.9 17"
-            >
-              <path
-                d="M11.332,2.734V0h-8.5V2.734H0v8.2H2.832V13.9H5.9V10.937H8.5V13.9h3.07V10.937H17v-8.2Zm-2.595,5.7H5.9V5.7H8.737Zm5.43,0H11.332V5.7h2.835Z"
-              />
-            </svg>
-            <span>Contact us</span>
-          </button>
+          <div class="mt-24">
+            <CyButton>Contact Us</CyButton>
+          </div>
         </div>
       </div>
       <!-- Projects Section -->
-      <div class="mx-10 mb-64 sm:mt-20">
+      <div class="mx-10 mb-64 mt-48">
         <!-- Section Title -->
         <div class="flex justify-start mb-6">
-          <div
-            class="text-xl sm:text-2xl font-light sm:font-normal text-white tracking-wide"
-          >
-            Projects
-          </div>
+          <div class="text-h4 text-white">Projects</div>
         </div>
         <!-- Project Grid -->
         <div class="grid gap-10 md:gap-20 grid-cols-1 sm:grid-cols-2">
@@ -83,15 +54,11 @@
         </div>
       </div>
       <!-- How we design and code -->
-      <div class="mx-10 pb-64">
+      <div class="mx-10 pb-64 pt-8">
         <div class="grid grid-cols-1 sm:grid-cols-2">
           <div class="w-5/6 sm:ml-10" style="max-width: 403px">
             <div class="flex pb-4">
-              <div
-                class="text-xl sm:hidden font-light text-white tracking-wide"
-              >
-                How we design
-              </div>
+              <div class="text-h4 text-white">How we design</div>
               <div
                 class="hidden sm:block text-2xl font-normal text-white tracking-wide sm:pr-2"
               >
@@ -112,9 +79,7 @@
                 </g>
               </svg>
             </div>
-            <div
-              class="text-sm sm:text-base font-light text-white tracking-wide"
-            >
+            <div class="text-body-2 text-white">
               With clarity and focus, we enable the user to engage with purpose.
             </div>
           </div>
@@ -123,11 +88,7 @@
             style="max-width: 403px"
           >
             <div class="flex pb-4">
-              <div
-                class="text-xl sm:hidden font-light text-white tracking-wide"
-              >
-                How we code
-              </div>
+              <div class="text-h4 text-white">How we code</div>
               <div
                 class="hidden sm:block text-2xl font-normal text-white tracking-wide sm:pr-2"
               >
@@ -148,9 +109,7 @@
                 </g>
               </svg>
             </div>
-            <div
-              class="text-sm sm:text-base font-light text-white tracking-wide"
-            >
+            <div class="text-body-2 text-white">
               Matching the beauty of the design, our code is modern, concise,
               and adaptive.
             </div>
@@ -158,12 +117,8 @@
         </div>
       </div>
       <!-- About Us -->
-      <div class="mx-10 pb-64">
-        <div
-          class="text-xl sm:text-2xl font-light sm:font-normal text-white tracking-wide"
-        >
-          About Us
-        </div>
+      <div class="mx-10 pb-64 pt-20">
+        <div class="text-h4 text-white">About Us</div>
         <AboutUs
           name="Luca Ban"
           bio="Has been a technology enthusiast since birth. He thinks of writing code as nothing less than poetry. Believes everything is possible - talent is a skill you teach yourself."
@@ -195,26 +150,12 @@
         </div>
       </div>
       <!-- Copyright and Terms -->
-      <div class="mx-10 mt-16 sm:mt-20 md:mt-24 pb-10 flex-col justify-end">
+      <div class="mx-10 mt-16 sm:mt-20 md:mt-24 pb-16 flex-col justify-end">
         <p class="text-white uppercase text-sm tracking-widest text-center">
           &copy; 2020 CyCraft
         </p>
-        <div class="flex justify-center mt-2">
-          <button
-            class="bg-white hover:bg-gray-400 text-black font-bold text-base uppercase py-3 px-4 inline-flex items-center"
-            @click="clicked"
-          >
-            <svg
-              class="fill-current w-5 h-4 mr-2"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 13.9 17"
-            >
-              <path
-                d="M11.332,2.734V0h-8.5V2.734H0v8.2H2.832V13.9H5.9V10.937H8.5V13.9h3.07V10.937H17v-8.2Zm-2.595,5.7H5.9V5.7H8.737Zm5.43,0H11.332V5.7h2.835Z"
-              />
-            </svg>
-            <span>Terms &amp; Privacy</span>
-          </button>
+        <div class="flex justify-center mt-4">
+          <CyButton>Terms &amp; Privacy</CyButton>
         </div>
       </div>
     </div>
@@ -225,12 +166,16 @@
 import Project from './Project.vue'
 import AboutUs from './AboutUs.vue'
 import CyToggle from './CyToggle.vue'
+import Monster from './Monster.vue'
+import CyButton from './CyButton.vue'
 export default {
   name: 'CycraftHomePage',
   components: {
     Project,
     AboutUs,
     CyToggle,
+    Monster,
+    CyButton,
   },
   props: {},
   methods: {
@@ -241,8 +186,62 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-@import '../assets/typography.sass'
-text-h1
-  color: #fff
+<style lang="sass">
+@responsive
+  .text-h1
+    font-size: 48px
+    line-height: 58px
+    font-weight: 700
+    letter-spacing: 0.06em
+    text-transform: uppercase
+
+@responsive
+  .text-h2
+    font-size: 40px
+    line-height: 49px
+    font-weight: 500
+    letter-spacing: 0.025em
+
+@responsive
+  .text-h3
+    font-size: 20px
+    line-height: 28px
+    font-weight: 800
+    letter-spacing: 0.1em
+    text-transform: uppercase
+
+@responsive
+  .text-h4
+    font-size: 20px
+    line-height: 28px
+    font-weight: 300
+    letter-spacing: 0.001em
+
+@responsive
+  .text-h5
+    font-size: 14px
+    line-height: 18px
+    font-weight: 800
+    letter-spacing: 0.1em
+    text-transform: uppercase
+
+@responsive
+  .text-h6
+    font-size: 12px
+    line-height: 18px
+    font-weight: 800
+    letter-spacing: 0.1em
+
+@responsive
+  .text-body-1
+    line-height: 18px
+    font-weight: 400
+    letter-spacing: 0.009em
+
+@responsive
+  .text-body-2
+    font-size: 12px
+    line-height: 15px
+    font-weight: 300
+    letter-spacing: 0.015em
 </style>
