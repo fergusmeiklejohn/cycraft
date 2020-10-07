@@ -25,7 +25,7 @@
         <div
           class="flex-col justify-center content-center p-10 pb-10 mt-16 sm:mr-4 sm:max-w-md"
         >
-          <div class="text-h1 sm:text-h2 text-white">
+          <div class="text-h1 sm:text-h2 sm:normal-case text-white">
             We Craft without cruft.
           </div>
           <div class="text-h4 text-white pt-6">
@@ -59,11 +59,6 @@
           <div class="w-5/6 sm:ml-10" style="max-width: 403px">
             <div class="flex pb-4">
               <div class="text-h4 text-white">How we design</div>
-              <div
-                class="hidden sm:block text-2xl font-normal text-white tracking-wide sm:pr-2"
-              >
-                How We Design
-              </div>
               <svg
                 class="w-4 sm:w-6 ml-2"
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,11 +84,6 @@
           >
             <div class="flex pb-4">
               <div class="text-h4 text-white">How we code</div>
-              <div
-                class="hidden sm:block text-2xl font-normal text-white tracking-wide sm:pr-2"
-              >
-                How We Code
-              </div>
               <svg
                 class="w-4 sm:w-6 ml-2"
                 xmlns="http://www.w3.org/2000/svg"
@@ -131,6 +121,7 @@
             name="Tadaki Matsushita"
             bio="Self taught coder. He has helped companies all over Japan turn their vision into code. Excels at web marketing; and currently loves automation."
             class="sm:w-3/4 sm:mt-10"
+            reverse="true"
           />
         </div>
       </div>
@@ -187,61 +178,5 @@ export default {
 </script>
 
 <style lang="sass">
-@responsive
-  .text-h1
-    font-size: 48px
-    line-height: 58px
-    font-weight: 700
-    letter-spacing: 0.06em
-    text-transform: uppercase
-
-@responsive
-  .text-h2
-    font-size: 40px
-    line-height: 49px
-    font-weight: 500
-    letter-spacing: 0.025em
-
-@responsive
-  .text-h3
-    font-size: 20px
-    line-height: 28px
-    font-weight: 800
-    letter-spacing: 0.1em
-    text-transform: uppercase
-
-@responsive
-  .text-h4
-    font-size: 20px
-    line-height: 28px
-    font-weight: 300
-    letter-spacing: 0.001em
-
-@responsive
-  .text-h5
-    font-size: 14px
-    line-height: 18px
-    font-weight: 800
-    letter-spacing: 0.1em
-    text-transform: uppercase
-
-@responsive
-  .text-h6
-    font-size: 12px
-    line-height: 18px
-    font-weight: 800
-    letter-spacing: 0.1em
-
-@responsive
-  .text-body-1
-    line-height: 18px
-    font-weight: 400
-    letter-spacing: 0.009em
-
-@responsive
-  .text-body-2
-    font-size: 12px
-    line-height: 15px
-    font-weight: 300
-    letter-spacing: 0.015em
+// Recreate the text styles here with @apply
 </style>
