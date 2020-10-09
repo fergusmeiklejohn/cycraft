@@ -1,6 +1,6 @@
 <template>
   <button
-    class="bg-white hover:bg-gray-400 text-black button-text py-3 px-4 inline-flex items-center"
+    class="bg-white border-2 border-white hover:bg-btn-light-green focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-black button-text py-3 px-4 inline-flex items-center"
     @click="clicked"
   >
     <svg
