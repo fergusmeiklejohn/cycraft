@@ -18,7 +18,7 @@
         alt="Avatar"
       />
       <div class="flex-col sm:ml-4">
-        <p class="text-body-2 text-white sm:w-11/12">
+        <p class="body-text text-white sm:w-11/12">
           {{ bio }}
         </p>
         <div v-if="twitter || github" class="flex items-center mt-2">

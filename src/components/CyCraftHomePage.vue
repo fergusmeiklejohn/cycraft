@@ -14,33 +14,31 @@
       <!-- Hero -->
       <div class="flex">
         <div
-          class="hidden sm:flex pt-24 sm:pl-10 md:pl-16 lg:pl-20 sm:pr-4 md:pr-10 lg:pr-20"
+          class="hidden sm:flex sm:items-end pt-24 sm:pl-12 sm:pr-4 md:pr-10 lg:pr-20"
         >
           <!-- CyCraft Logo -->
-          <div class="object-contain">
+          <div class="object-contain sm:max-w-xs md:max-w-none">
             <img src="../assets/CyCraft Logo.svg" alt="" />
           </div>
         </div>
         <!-- Title Text & Button-->
-        <div
-          class="flex-col justify-center content-center p-10 pb-10 mt-16 sm:mr-4 sm:max-w-md"
-        >
-          <div class="text-h1 sm:text-h2 sm:normal-case text-white">
+        <div class="flex-col pt-10 px-10 mt-16 sm:mt-32 sm:mr-4">
+          <div class="main-title text-white" style="max-width: 300px">
             We Craft without cruft.
           </div>
-          <div class="text-h4 text-white pt-6">
+          <div class="main-subtitle text-white pt-6" style="max-width: 370px">
             We craft beautiful apps and strive for a better web.
           </div>
-          <div class="mt-24">
+          <div class="mt-24 sm:mt-8 lg:mt-24">
             <CyButton>Contact Us</CyButton>
           </div>
         </div>
       </div>
       <!-- Projects Section -->
-      <div class="mx-10 mb-64 mt-48">
+      <div class="mx-10 mb-64 mt-64">
         <!-- Section Title -->
         <div class="flex justify-start mb-6">
-          <div class="text-h4 text-white">Projects</div>
+          <div class="title-text text-white">Projects</div>
         </div>
         <!-- Project Grid -->
         <div class="grid gap-10 md:gap-20 grid-cols-1 sm:grid-cols-2">
@@ -58,7 +56,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2">
           <div class="w-5/6 sm:ml-10" style="max-width: 403px">
             <div class="flex pb-4">
-              <div class="text-h4 text-white">How we design</div>
+              <div class="title-text text-white">How we design</div>
               <svg
                 class="w-4 sm:w-6 ml-2"
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +72,7 @@
                 </g>
               </svg>
             </div>
-            <div class="text-body-2 text-white">
+            <div class="body-text text-white">
               With clarity and focus, we enable the user to engage with purpose.
             </div>
           </div>
@@ -83,7 +81,7 @@
             style="max-width: 403px"
           >
             <div class="flex pb-4">
-              <div class="text-h4 text-white">How we code</div>
+              <div class="title-text text-white">How we code</div>
               <svg
                 class="w-4 sm:w-6 ml-2"
                 xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +97,7 @@
                 </g>
               </svg>
             </div>
-            <div class="text-body-2 text-white">
+            <div class="body-text text-white">
               Matching the beauty of the design, our code is modern, concise,
               and adaptive.
             </div>
@@ -108,21 +106,81 @@
       </div>
       <!-- About Us -->
       <div class="mx-10 pb-64 pt-20">
-        <div class="text-h4 text-white">About Us</div>
-        <AboutUs
-          name="Luca Ban"
-          bio="Has been a technology enthusiast since birth. He thinks of writing code as nothing less than poetry. Believes everything is possible - talent is a skill you teach yourself."
-          twitter="#"
-          github="#"
-          class="sm:w-3/4 sm:mt-10"
-        />
-        <div class="flex justify-end">
-          <AboutUs
-            name="Tadaki Matsushita"
-            bio="Self taught coder. He has helped companies all over Japan turn their vision into code. Excels at web marketing; and currently loves automation."
-            class="sm:w-3/4 sm:mt-10"
-            reverse="true"
-          />
+        <div class="title-text text-white">About Us</div>
+        <!-- Luca -->
+        <div class="flex-col mt-8 pb-8">
+          <div class="sm:w-3/4 sm:mt-10">
+            <div
+              class="flex items-center"
+              :class="{ 'flex-row-reverse': reverse }"
+            >
+              <div
+                class="text-white uppercase text-sm sm:text-base tracking-widest"
+                style="white-space: nowrap; margin-left: 6px"
+              >
+                Luca Ban
+              </div>
+              <div class="line"></div>
+            </div>
+            <div class="flex mt-2" :class="{ 'flex-row-reverse': reverse }">
+              <img
+                class="w-10 h-10 sm:w-56 sm:h-56 rounded-full mr-4"
+                src="../assets/martin.jpg"
+                alt="Avatar"
+              />
+              <div class="flex-col sm:ml-4">
+                <p class="body-text text-white sm:w-11/12">
+                  Has been a technology enthusiast since birth. He thinks of
+                  writing code as nothing less than poetry. Believes everything
+                  is possible — talent is a skill you teach yourself.
+                </p>
+                <div class="flex items-center mt-2">
+                  <a href="#" class="flex items-center">
+                    <img
+                      class="h-6"
+                      src="../assets/Twitter_Logo.svg"
+                      alt="Twitter Logo"
+                    />
+                    <p class="text-white text-body-2">Twitter</p>
+                  </a>
+                  <a href="#" class="flex items-center ml-3">
+                    <img class="h-4" src="../assets/Github_Mark.svg" />
+                    <p class="text-white text-body-2 ml-1">Github</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tadaki -->
+        <div class="flex-col mt-8 pb-8">
+          <div class="flex sm:justify-end">
+            <div class="sm:w-3/4 sm:mt-10">
+              <div class="flex items-center sm:flex-row-reverse">
+                <div
+                  class="text-white uppercase text-sm sm:text-base tracking-widest"
+                  style="white-space: nowrap; margin-left: 6px"
+                >
+                  Tadaki Matsushita
+                </div>
+                <div class="line"></div>
+              </div>
+              <div class="flex mt-2 ms:flex-row-reverse">
+                <img
+                  class="w-10 h-10 sm:w-56 sm:h-56 rounded-full mr-4"
+                  src="../assets/martin.jpg"
+                  alt="Avatar"
+                />
+                <div class="flex-col sm:ml-4">
+                  <p class="body-text text-white sm:w-11/12">
+                    "Self taught coder. He has helped companies all over Japan
+                    turn their vision into code. Excels at web marketing; and
+                    currently loves automation."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- Contact Us logo -->
@@ -155,7 +213,6 @@
 
 <script>
 import Project from './Project.vue'
-import AboutUs from './AboutUs.vue'
 import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
 import CyButton from './CyButton.vue'
@@ -163,7 +220,6 @@ export default {
   name: 'CycraftHomePage',
   components: {
     Project,
-    AboutUs,
     CyToggle,
     Monster,
     CyButton,
@@ -178,5 +234,72 @@ export default {
 </script>
 
 <style lang="sass">
-// Recreate the text styles here with @apply
+.main-title
+  font-size: 48px
+  line-height: 58px
+  font-weight: 700
+  letter-spacing: 0.06em
+  text-transform: uppercase
+@media (min-width: 640px)
+  .main-title
+    font-size: 40px
+    line-height: 49px
+    font-weight: 500
+    letter-spacing: 0.025em
+    text-transform: none
+
+.main-subtitle
+  font-size: 20px
+  line-height: 28px
+  font-weight: 300
+  letter-spacing: 0.001em
+
+.title-text
+  font-size: 20px
+  line-height: 28px
+  font-weight: 300
+  letter-spacing: 0.001em
+@media (min-width: 640px)
+  .title-text
+    font-size: 40px
+    line-height: 49px
+    font-weight: 500
+    letter-spacing: 0.025em
+
+.body-text
+  font-size: 12px
+  line-height: 15px
+  font-weight: 300
+  letter-spacing: 0.015em
+@media (min-width: 640px)
+  .body-text
+    font-size: 20px
+    line-height: 28px
+    font-weight: 300
+    letter-spacing: 0.001em
+
+.button-text
+  font-size: 14px
+  line-height: 18px
+  font-weight: 800
+  letter-spacing: 0.024em
+  text-transform: uppercase
+
+.project-title
+  font-size: 14px
+  line-height: 18px
+  font-weight: 600
+  letter-spacing: 0.07em
+  text-transform: uppercase
+@media (min-width: 640px)
+  .project-title
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.1em
+
+.line
+  background: white
+  height: 1px
+  margin-left: 6px
+  width: 100%
 </style>

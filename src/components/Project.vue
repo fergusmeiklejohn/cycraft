@@ -1,9 +1,7 @@
 <template>
   <div class="flex-col">
     <div class="title-container">
-      <span class="text-white uppercase text-xs sm:text-sm tracking-widest">{{
-        title
-      }}</span>
+      <span class="text-white project-title">{{ title }}</span>
       <div class="line"></div>
     </div>
     <div class="relative mx-auto mt-3" style="padding-bottom: 100%">
