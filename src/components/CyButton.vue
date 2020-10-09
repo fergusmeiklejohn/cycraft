@@ -1,7 +1,7 @@
 <template>
   <button
     class="bg-white border-2 border-white hover:bg-btn-light-green focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-black button-text py-3 px-4 inline-flex items-center"
-    @click="clicked"
+    @click="$emit('click')"
   >
     <svg
       class="fill-current w-5 h-4 mr-2"

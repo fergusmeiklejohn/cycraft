@@ -1,6 +1,6 @@
 <template>
   <div class="flex-col">
-    <div class="title-container">
+    <div class="flex items-center">
       <span class="text-white project-title">{{ title }}</span>
       <div class="line"></div>
     </div>
@@ -13,16 +13,6 @@
     </div>
   </div>
 </template>
-<style lang="sass" scoped>
-.title-container
-  display: flex
-  align-items: center
-.line
-  background: white
-  height: 1px
-  margin-left: 6px
-  width: 100%
-</style>
 <script>
 export default {
   name: 'Project',
