@@ -30,7 +30,7 @@
             We craft beautiful apps and strive for a better web.
           </div>
           <div class="mt-24 sm:mt-8 lg:mt-24">
-            <CyButton>Contact Us</CyButton>
+            <CyButton @click="clicked">Contact Us</CyButton>
           </div>
         </div>
       </div>
@@ -110,10 +110,7 @@
         <!-- Luca -->
         <div class="flex-col mt-8 pb-8">
           <div class="sm:w-3/4 sm:mt-10">
-            <div
-              class="flex items-center"
-              :class="{ 'flex-row-reverse': reverse }"
-            >
+            <div class="flex items-center">
               <div
                 class="text-white uppercase text-sm sm:text-base tracking-widest"
                 style="white-space: nowrap; margin-left: 6px"
@@ -122,7 +119,7 @@
               </div>
               <div class="line"></div>
             </div>
-            <div class="flex mt-2" :class="{ 'flex-row-reverse': reverse }">
+            <div class="flex mt-2">
               <img
                 class="w-10 h-10 sm:w-56 sm:h-56 rounded-full mr-4"
                 src="../assets/martin.jpg"
@@ -135,17 +132,25 @@
                   is possible — talent is a skill you teach yourself.
                 </p>
                 <div class="flex items-center mt-2">
-                  <a href="#" class="flex items-center">
+                  <a
+                    href="https://twitter.com/Mesqueeb"
+                    target="_blank"
+                    class="flex items-center"
+                  >
                     <img
-                      class="h-6"
+                      class="h-6 sm:h-10"
                       src="../assets/Twitter_Logo.svg"
                       alt="Twitter Logo"
                     />
-                    <p class="text-white text-body-2">Twitter</p>
+                    <p class="text-white body-text">Twitter</p>
                   </a>
-                  <a href="#" class="flex items-center ml-3">
-                    <img class="h-4" src="../assets/Github_Mark.svg" />
-                    <p class="text-white text-body-2 ml-1">Github</p>
+                  <a
+                    href="https://github.com/mesqueeb"
+                    target="_blank"
+                    class="flex items-center ml-3"
+                  >
+                    <img class="h-4 sm:h-6" src="../assets/Github_Mark.svg" />
+                    <p class="text-white body-text ml-1">Github</p>
                   </a>
                 </div>
               </div>
@@ -165,7 +170,7 @@
                 </div>
                 <div class="line"></div>
               </div>
-              <div class="flex mt-2 ms:flex-row-reverse">
+              <div class="flex mt-2 sm:flex-row-reverse">
                 <img
                   class="w-10 h-10 sm:w-56 sm:h-56 rounded-full mr-4"
                   src="../assets/martin.jpg"
@@ -185,8 +190,8 @@
       </div>
       <!-- Contact Us logo -->
       <div class="mx-10 mt-20 pb-8">
-        <a href="#">
-          <img src="../assets/Contact Us@2x.png" alt="" />
+        <a style="cursor: pointer" @click="clicked">
+          <img src="../assets/Contact Us@2x.png" alt="Contact Us Button" />
         </a>
       </div>
       <!-- English or Japanese -->
@@ -195,7 +200,7 @@
           English? or Japanese?
         </p>
         <div class="flex justify-center mt-2">
-          <cy-toggle />
+          <cy-toggle @input="toggled" />
         </div>
       </div>
       <!-- Copyright and Terms -->
@@ -204,7 +209,7 @@
           &copy; 2020 CyCraft
         </p>
         <div class="flex justify-center mt-4">
-          <CyButton>Terms &amp; Privacy</CyButton>
+          <CyButton @click="clicked">Terms &amp; Privacy</CyButton>
         </div>
       </div>
     </div>
@@ -228,6 +233,9 @@ export default {
   methods: {
     clicked() {
       console.log('clicked')
+    },
+    toggled(value) {
+      console.log('toggled: ', value)
     },
   },
 }

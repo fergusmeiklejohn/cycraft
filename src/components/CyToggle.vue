@@ -1,14 +1,22 @@
 <template>
   <label class="cy-toggle">
-    <input type="checkbox" @click="$emit('input', !value)" />
+    <input type="checkbox" @click="toggle" />
     <span class="slider round"> </span>
   </label>
 </template>
 <script>
 export default {
   name: 'CyToggle',
-  props: {
-    value: { type: Boolean, default: false },
+  data() {
+    return {
+      value: false,
+    }
+  },
+  methods: {
+    toggle() {
+      this.value = !this.value
+      this.$emit('input', this.value)
+    },
   },
 }
 </script>
