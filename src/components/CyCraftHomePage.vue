@@ -72,12 +72,12 @@
                 </g>
               </svg>
             </div>
-            <div class="body-text text-white">
+            <div class="about-us-body text-white">
               With clarity and focus, we enable the user to engage with purpose.
             </div>
           </div>
           <div
-            class="w-5/6 mt-12 sm:ml-10 md:ml-12 lg:ml-16"
+            class="w-5/6 mt-16 sm:mt-24 sm:ml-10 md:ml-12 lg:ml-16"
             style="max-width: 403px"
           >
             <div class="flex pb-4">
@@ -97,7 +97,7 @@
                 </g>
               </svg>
             </div>
-            <div class="body-text text-white">
+            <div class="about-us-body text-white">
               Matching the beauty of the design, our code is modern, concise,
               and adaptive.
             </div>
@@ -112,8 +112,8 @@
           <div class="sm:w-3/4 sm:mt-10">
             <div class="flex items-center">
               <div
-                class="text-white uppercase text-sm sm:text-base tracking-widest"
-                style="white-space: nowrap; margin-left: 6px"
+                class="text-white name-title"
+                style="white-space: nowrap; margin-right: 20px"
               >
                 Luca Ban
               </div>
@@ -126,7 +126,7 @@
                 alt="Avatar"
               />
               <div class="flex-col sm:ml-4">
-                <p class="body-text text-white sm:w-11/12">
+                <p class="about-us-body text-white sm:w-11/12">
                   Has been a technology enthusiast since birth. He thinks of
                   writing code as nothing less than poetry. Believes everything
                   is possible — talent is a skill you teach yourself.
@@ -142,7 +142,7 @@
                       src="../assets/Twitter_Logo.svg"
                       alt="Twitter Logo"
                     />
-                    <p class="text-white body-text">Twitter</p>
+                    <p class="text-white about-us-body">Twitter</p>
                   </a>
                   <a
                     href="https://github.com/mesqueeb"
@@ -150,7 +150,7 @@
                     class="flex items-center ml-3"
                   >
                     <img class="h-4 sm:h-6" src="../assets/Github_Mark.svg" />
-                    <p class="text-white body-text ml-1">Github</p>
+                    <p class="text-white about-us-body ml-1">Github</p>
                   </a>
                 </div>
               </div>
@@ -163,8 +163,8 @@
             <div class="sm:w-3/4 sm:mt-10">
               <div class="flex items-center sm:flex-row-reverse">
                 <div
-                  class="text-white uppercase text-sm sm:text-base tracking-widest"
-                  style="white-space: nowrap; margin-left: 6px"
+                  class="text-white name-title tadaki-line-margin"
+                  style="white-space: nowrap"
                 >
                   Tadaki Matsushita
                 </div>
@@ -172,15 +172,15 @@
               </div>
               <div class="flex mt-2 sm:flex-row-reverse">
                 <img
-                  class="w-10 h-10 sm:w-56 sm:h-56 rounded-full mr-4"
+                  class="w-10 h-10 sm:w-56 sm:h-56 rounded-full mr-4 sm:mr-0"
                   src="../assets/martin.jpg"
                   alt="Avatar"
                 />
                 <div class="flex-col sm:ml-4">
-                  <p class="body-text text-white sm:w-11/12">
-                    "Self taught coder. He has helped companies all over Japan
+                  <p class="about-us-body text-white sm:w-11/12">
+                    Self taught coder. He has helped companies all over Japan
                     turn their vision into code. Excels at web marketing; and
-                    currently loves automation."
+                    currently loves automation.
                   </p>
                 </div>
               </div>
@@ -195,7 +195,7 @@
         </a>
       </div>
       <!-- English or Japanese -->
-      <div class="mx-10 mt-4 sm:mt-10 md:mt-16 flex-col justify-end">
+      <div class="mx-10 mt-4 sm:mt-24 md:mt-32 flex-col justify-end">
         <p class="text-white uppercase text-sm tracking-widest text-center">
           English? or Japanese?
         </p>
@@ -204,7 +204,7 @@
         </div>
       </div>
       <!-- Copyright and Terms -->
-      <div class="mx-10 mt-16 sm:mt-20 md:mt-24 pb-16 flex-col justify-end">
+      <div class="mx-10 mt-16 sm:mt-24 md:mt-32 pb-16 flex-col justify-end">
         <p class="text-white uppercase text-sm tracking-widest text-center">
           &copy; 2020 CyCraft
         </p>
@@ -274,22 +274,20 @@ export default {
     font-weight: 500
     letter-spacing: 0.025em
 
-.body-text
+.about-us-body
   font-size: 12px
-  line-height: 15px
   font-weight: 300
-  letter-spacing: 0.015em
+  line-height: 15px
+  letter-spacing: 0.028
 @media (min-width: 640px)
-  .body-text
+  .about-us-body
     font-size: 20px
     line-height: 28px
-    font-weight: 300
-    letter-spacing: 0.001em
 
 .button-text
   font-size: 14px
   line-height: 18px
-  font-weight: 800
+  font-weight: 700
   letter-spacing: 0.024em
   text-transform: uppercase
 
@@ -305,9 +303,26 @@ export default {
     line-height: 28px
     letter-spacing: 0.1em
 
+.name-title
+  font-size: 14px
+  font-weight: 600
+  line-height: 18px
+  letter-spacing: 0.08em
+  text-transform: uppercase
+@media (min-width: 640px)
+  .name-title
+    font-size: 20px
+    line-height: 28px
+
 .line
   background: white
   height: 1px
-  margin-left: 6px
   width: 100%
+
+.tadaki-line-margin
+  margin-right: 20px
+@media (min-width: 640px)
+  .tadaki-line-margin
+    margin-right: 0px
+    margin-left: 20px
 </style>

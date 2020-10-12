@@ -1,7 +1,10 @@
 <template>
   <button
-    class="bg-white border-2 border-white hover:bg-btn-light-green focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-black button-text py-3 px-4 inline-flex items-center"
+    id="cy-button"
+    class="relative bg-white border-2 border-white hover:bg-btn-light-green focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-black button-text py-3 px-4 inline-flex items-center"
     @click="$emit('click')"
+    @mouseover="hover = true"
+    @mouseleave="hover = false"
   >
     <svg
       class="fill-current w-5 h-4 mr-2"
@@ -15,3 +18,50 @@
     <span><slot></slot></span>
   </button>
 </template>
+<script>
+export default {
+  name: 'CyButton',
+  data() {
+    return {
+      hover: false,
+      intervalFunc: null,
+    }
+  },
+  watch: {
+    hover: function () {
+      if (this.hover) {
+        this.intervalFunc = setInterval(function () {
+          let glitch = document.getElementsByClassName('box')
+          for (let i = 0; i < glitch.length; i++) {
+            glitch[i].style.left = Math.floor(Math.random() * 20) + 'vw'
+            glitch[i].style.top = Math.floor(Math.random() * 20) + 'vh'
+            glitch[i].style.width = Math.floor(Math.random() * 40) + 'px'
+            glitch[i].style.height = Math.floor(Math.random() * 20) + 'px'
+          }
+        }, 200)
+      } else {
+        let glitch = document.getElementsByClassName('box')
+        for (let i = 0; i < glitch.length; i++) {
+          glitch[i].remove()
+        }
+        clearInterval(this.intervalFunc)
+      }
+    },
+  },
+  mounted() {
+    let btn = document.getElementById('cy-button')
+    let count = 20
+    for (let i = 0; i < count; i++) {
+      let glitchBox = document.createElement('div')
+      glitchBox.className = 'box'
+      btn.appendChild(glitchBox)
+    }
+  },
+}
+</script>
+<style lang="scss">
+.box {
+  position: absolute;
+  background: #000;
+}
+</style>
