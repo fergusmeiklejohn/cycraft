@@ -24,44 +24,12 @@ export default {
   data() {
     return {
       hover: false,
-      intervalFunc: null,
     }
   },
   watch: {
-    hover: function () {
-      if (this.hover) {
-        this.intervalFunc = setInterval(function () {
-          let glitch = document.getElementsByClassName('box')
-          for (let i = 0; i < glitch.length; i++) {
-            glitch[i].style.left = Math.floor(Math.random() * 20) + 'vw'
-            glitch[i].style.top = Math.floor(Math.random() * 20) + 'vh'
-            glitch[i].style.width = Math.floor(Math.random() * 40) + 'px'
-            glitch[i].style.height = Math.floor(Math.random() * 20) + 'px'
-          }
-        }, 200)
-      } else {
-        let glitch = document.getElementsByClassName('box')
-        for (let i = 0; i < glitch.length; i++) {
-          glitch[i].remove()
-        }
-        clearInterval(this.intervalFunc)
-      }
-    },
+    hover: function () {},
   },
-  mounted() {
-    let btn = document.getElementById('cy-button')
-    let count = 20
-    for (let i = 0; i < count; i++) {
-      let glitchBox = document.createElement('div')
-      glitchBox.className = 'box'
-      btn.appendChild(glitchBox)
-    }
-  },
+  mounted() {},
 }
 </script>
-<style lang="scss">
-.box {
-  position: absolute;
-  background: #000;
-}
-</style>
+<style lang="scss"></style>

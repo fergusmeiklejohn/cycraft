@@ -4,6 +4,7 @@
       class="flex-col min-width-full justify-center"
       style="max-width: 1100px"
     >
+      <ButtonHoverTemp />
       <!-- Mobile Header -->
       <div class="sm:hidden flex content-center justify-between p-3">
         <div class="flex items-center">
@@ -221,6 +222,7 @@ import Project from './Project.vue'
 import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
 import CyButton from './CyButton.vue'
+import ButtonHoverTemp from './ButtonHoverTemp.vue'
 export default {
   name: 'CycraftHomePage',
   components: {
@@ -228,6 +230,7 @@ export default {
     CyToggle,
     Monster,
     CyButton,
+    ButtonHoverTemp,
   },
   props: {},
   methods: {
