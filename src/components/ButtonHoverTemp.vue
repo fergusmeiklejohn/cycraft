@@ -12,75 +12,74 @@ export default {
     CyButton,
   },
   mounted() {
-    var btn = document.getElementById('cy-button')
-    var btnWidth = btn.offsetWidth
-    var btnHeight = btn.offsetHeight
-    console.log(btnHeight)
+    // var btn = document.getElementById('cy-button')
+    // var btnWidth = btn.offsetWidth
+    // var btnHeight = btn.offsetHeight
+    // console.log(btnHeight)
+    let width = 161
+    let height = 46
     var canvasHidden = document.createElement('canvas')
     var ctxHidden = canvasHidden.getContext('2d')
     var canvasShown = document.querySelector('canvas')
-    canvasShown.width = btnWidth
-    canvasShown.height = btnHeight
+    canvasShown.width = width
+    canvasShown.height = height
     var ctxShown = canvasShown.getContext('2d')
 
     function init() {
-      canvasHidden.width = btnWidth
-      canvasHidden.height = btnHeight
+      canvasHidden.width = width
+      canvasHidden.height = height
 
       ctxHidden.clearRect(0, 0, ctxHidden.width, ctxHidden.height)
       ctxHidden.textAlign = 'center'
       ctxHidden.textBaseLine = 'middle'
-      ctxHidden.font = 'bold 40px VT323, monospace'
-      ctxHidden.fillStyle = 'white'
+      ctxHidden.font = 'bold 100px VT323, monospace'
+      ctxHidden.fillStyle = 'black'
 
-      ctxHidden.fillText(
-        '■■■■■■',
-        canvasHidden.width / 2,
-        canvasHidden.height / 2
-      )
+      ctxHidden.fillText(' ', width, height)
 
-      ctxShown.clearRect(0, 0, canvasShown.width, canvasShown.height)
+      ctxShown.clearRect(0, 0, width, height)
       ctxShown.drawImage(canvasHidden, 0, 0)
-      var i = 10
+      var i = 5
       while (i--) {
         glitch()
       }
     }
 
     function glitch() {
-      var width = 161 + Math.random() * 100
-      var height = 46 + Math.random() * 50
+      var swidth = 161 - Math.random() * 100
+      var sheight = 46 - Math.random() * 100
+      var dwidth = 80 - Math.random() * 100
+      var dheight = 23 - Math.random() * 100
 
-      var x = Math.random() * canvasHidden.width
-      var y = Math.random() * canvasHidden.height
+      var x = Math.random() * 161
+      var y = Math.random() * 46
+      var dx = x + (Math.random() * 100 - 20)
+      var dy = y + (Math.random() * 100 - 15)
 
-      var dx = x + (Math.random() * 40 - 20)
-      var dy = y + (Math.random() * 30 - 15)
-
-      ctxShown.clearRect(x, y, width, height)
+      ctxShown.clearRect(x, y, swidth, sheight)
       ctxShown.fillStyle = '#4a6'
-      ctxShown.fillRect(x, y, width, height)
+      ctxShown.fillRect(x, y, dwidth, dheight)
       ctxShown.drawImage(
         canvasHidden,
         x,
         y,
-        width,
-        height,
+        swidth,
+        sheight,
         dx,
         dy,
-        width,
-        height
+        dwidth,
+        dheight
       )
     }
 
     setInterval(function () {
       init()
-    }, 1000 / 1)
+    }, 1000 / 2)
   },
 }
 </script>
 <style scoped>
-html,
+/* html,
 body {
   padding: 0px;
   margin: 0px;
@@ -88,14 +87,14 @@ body {
   font-family: 'VT323', monospace;
   color: #fff;
   height: 100%;
-}
+} */
 
-canvas {
+/* canvas {
   background: none;
   margin: auto;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-}
+} */
 </style>
