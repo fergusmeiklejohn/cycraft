@@ -4,7 +4,8 @@
       class="flex-col min-width-full justify-center"
       style="max-width: 1100px"
     >
-      <ButtonHoverTemp />
+      <ButtonHoverTemp class="m-10" />
+
       <!-- Mobile Header -->
       <div class="sm:hidden flex content-center justify-between p-3">
         <div class="flex items-center">
