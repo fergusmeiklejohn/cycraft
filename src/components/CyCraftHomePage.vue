@@ -1,5 +1,5 @@
 <template>
-  <div style="max-width: 1366px" class="bg-black flex justify-center">
+  <div style="max-width: 1366px" class="bg-black flex justify-center h-auto">
     <div
       class="flex-col min-width-full justify-center"
       style="max-width: 1100px"
@@ -29,7 +29,7 @@
           <div class="main-subtitle text-white pt-6" style="max-width: 370px">
             We craft beautiful apps and strive for a better web.
           </div>
-          <div class="mt-24 sm:mt-8 lg:mt-24">
+          <div class="mt-24 sm:mt-8 lg:mt-24" style="width: 11rem">
             <CyButton @click="clicked">Contact Us</CyButton>
           </div>
         </div>
@@ -209,7 +209,9 @@
           &copy; 2020 CyCraft
         </p>
         <div class="flex justify-center mt-4">
-          <CyButton @click="clicked">Terms &amp; Privacy</CyButton>
+          <div style="width: 13rem">
+            <CyButton @click="clicked">Terms &amp; Privacy</CyButton>
+          </div>
         </div>
       </div>
     </div>

@@ -6,8 +6,8 @@
     @mouseover="setHoverOn"
     @mouseleave="setHoverOff"
   >
-    <div class="absolute top-0">
-      <div class="inline-flex items-center py-3 px-4">
+    <div class="absolute inset-0">
+      <div class="inline-flex items-center justify-center py-3 px-4">
         <svg
           class="fill-current w-5 h-4 mr-2"
           xmlns="http://www.w3.org/2000/svg"
@@ -23,13 +23,7 @@
     <canvas
       v-show="hover"
       class="absolute top-0 left-0"
-      style="
-        z-index: 1;
-        width: 166px;
-        height: 50px;
-        margin-left: -2px;
-        margin-top: -2px;
-      "
+      style="z-index: 1; margin-left: -2px; margin-top: -2px"
     >
     </canvas>
   </button>
@@ -43,8 +37,8 @@ export default {
     }
   },
   mounted() {
-    let width = 170
-    let height = 50
+    let width = this.$el.offsetWidth
+    let height = this.$el.offsetHeight
     var canvasHidden = document.createElement('canvas')
     var ctxHidden = canvasHidden.getContext('2d')
     var canvasShown = document.querySelector('canvas')
@@ -53,13 +47,13 @@ export default {
     var ctxShown = canvasShown.getContext('2d')
 
     function glitch() {
-      var swidth = 161 - Math.random() * 100
-      var sheight = 46 - Math.random() * 100
-      var dwidth = 80 - Math.random() * 100
-      var dheight = 23 - Math.random() * 100
+      var swidth = width - Math.random() * 100
+      var sheight = height - Math.random() * 100
+      var dwidth = width / 2 - Math.random() * 100
+      var dheight = height / 2 - Math.random() * 100
 
-      var x = Math.random() * 161
-      var y = Math.random() * 46
+      var x = (Math.random() * width) / 2
+      var y = (Math.random() * height) / 2
       var dx = x + (Math.random() * 100 - 20)
       var dy = y + (Math.random() * 100 - 15)
 
@@ -86,9 +80,7 @@ export default {
       }
     }
 
-    setInterval(function () {
-      init()
-    }, 1000 / 15)
+    init()
   },
   methods: {
     setHoverOn() {
@@ -102,6 +94,6 @@ export default {
 </script>
 <style lang="sass">
 .btn
-  width: 161px
+  width: 100%
   height: 46px
 </style>
