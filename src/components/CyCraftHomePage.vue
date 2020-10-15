@@ -30,7 +30,9 @@
             We craft beautiful apps and strive for a better web.
           </div>
           <div class="mt-24 sm:mt-8 lg:mt-24" style="width: 11rem">
-            <CyButton @click="clicked">Contact Us</CyButton>
+            <CyButton data-text="CONTACT US" class="glitch" @click="clicked"
+              >Contact Us</CyButton
+            >
           </div>
         </div>
       </div>

@@ -80,7 +80,9 @@ export default {
       }
     }
 
-    init()
+    setInterval(function () {
+      init()
+    }, 1000 / 15)
   },
   methods: {
     setHoverOn() {

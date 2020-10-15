@@ -101,9 +101,4 @@ export default {
   },
 }
 </script>
-<style scoped>
-.btn {
-  width: 161px;
-  height: 46px;
-}
-</style>
+<style lang="sass" scoped></style>
