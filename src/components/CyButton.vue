@@ -2,8 +2,8 @@
   <button
     id="cy-button"
     class="relative btn bg-white border-2 border-white hover:bg-btn-light-green focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-black button-text"
-    @click="$emit('click')"
-    @mouseover="setHoverOn"
+    @click="clicked"
+    @mouseenter="setHoverOn"
     @mouseleave="setHoverOff"
   >
     <div class="absolute inset-0">
@@ -89,6 +89,10 @@ export default {
       this.hover = true
     },
     setHoverOff() {
+      this.hover = false
+    },
+    clicked() {
+      this.$emit('click')
       this.hover = false
     },
   },
