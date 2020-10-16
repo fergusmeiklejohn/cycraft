@@ -2,6 +2,8 @@
   <button
     class="bg-white border-2 border-white hover:bg-btn-light-green focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-black button-text py-3 px-4 inline-flex items-center"
     @click="$emit('click')"
+    @mouseenter="setHoverOn"
+    @mouseleave="setHoverOff"
   >
     <svg
       class="fill-current w-5 h-4 mr-2"
@@ -15,4 +17,28 @@
     <span><slot></slot></span>
   </button>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      hover: false,
+    }
+  },
+  methods: {
+    setHoverOn() {
+      this.hover = true
+      this.$emit('setHover', this.hover)
+    },
+    setHoverOff() {
+      this.hover = false
+      this.$emit('setHover', this.hover)
+    },
+    clicked() {
+      this.$emit('click')
+      this.hover = false
+      this.$emit('setHover', this.hover)
+    },
+  },
+}
+</script>
 <style scoped></style>
