@@ -1,16 +1,19 @@
 <template>
   <div id="app" class="bg-black flex justify-center">
-    <CyCraftHomePage />
+    <!-- <CyCraftHomePage /> -->
+    <TestPage />
   </div>
 </template>
 
 <script>
 import CyCraftHomePage from './components/CyCraftHomePage.vue'
+import TestPage from './components/TestPage.vue'
 
 export default {
   name: 'App',
   components: {
-    CyCraftHomePage,
+    // CyCraftHomePage,
+    TestPage,
   },
 }
 </script>
