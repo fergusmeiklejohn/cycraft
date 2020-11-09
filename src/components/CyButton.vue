@@ -2,7 +2,8 @@
   <button
     id="cy-button"
     class="relative btn bg-white border-2 border-white hover:bg-btn-light-green focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-black button-text"
-    @click="clicked"
+    v-bind="$attrs"
+    v-on="$listeners"
     @mouseenter="setHoverOn"
     @mouseleave="setHoverOff"
   >
@@ -31,6 +32,7 @@
 <script>
 export default {
   name: 'CyButton',
+  inheritAttrs: false,
   data() {
     return {
       hover: false,
@@ -52,10 +54,10 @@ export default {
       var dwidth = width / 2 - Math.random() * 100
       var dheight = height / 2 - Math.random() * 100
 
-      var x = (Math.random() * width) / 2
-      var y = (Math.random() * height) / 2
-      var dx = x + (Math.random() * 100 - 20)
-      var dy = y + (Math.random() * 100 - 15)
+      var x = Math.random() * width
+      var y = Math.random() * height
+      var dx = x + (Math.random() * 100 + 20)
+      var dy = y + (Math.random() * 100 + 15)
 
       ctxShown.clearRect(x, y, swidth, sheight)
       ctxShown.fillStyle = '#000'
@@ -73,26 +75,15 @@ export default {
       )
     }
 
-    function init() {
-      var i = 5
-      while (i--) {
-        glitch()
-      }
-    }
-
     setInterval(function () {
-      init()
-    }, 1000 / 15)
+      glitch()
+    }, 1000 / 25)
   },
   methods: {
     setHoverOn() {
       this.hover = true
     },
     setHoverOff() {
-      this.hover = false
-    },
-    clicked() {
-      this.$emit('click')
       this.hover = false
     },
   },
