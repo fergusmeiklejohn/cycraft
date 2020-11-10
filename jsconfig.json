@@ -2,5 +2,6 @@
   "compilerOptions": {
     "baseUrl": "."
   },
+  "include": ["./src/**/*"],
   "exclude": ["dist", ".quasar", "node_modules"]
 }
