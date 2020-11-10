@@ -225,6 +225,7 @@ import Project from './Project.vue'
 import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
 import CyButton from './CyButton.vue'
+
 export default {
   name: 'CycraftHomePage',
   components: {
