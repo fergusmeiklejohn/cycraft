@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "exclude": ["dist", ".quasar", "node_modules"]
+}
