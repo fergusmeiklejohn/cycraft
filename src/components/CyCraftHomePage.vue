@@ -234,7 +234,6 @@ export default {
     Monster,
     CyButton,
   },
-  props: {},
   methods: {
     clicked() {
       console.log('clicked')
