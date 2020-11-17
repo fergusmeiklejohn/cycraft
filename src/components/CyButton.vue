@@ -24,8 +24,8 @@
     </div>
     <canvas
       v-show="hover"
-      class="absolute top-0 left-0"
-      style="z-index: 1; margin-left: -2px; margin-top: -2px"
+      class="absolute top-0"
+      style="z-index: 1; margin-left: -7px; margin-top: -7px"
     >
     </canvas>
   </button>
@@ -45,11 +45,11 @@ export default {
     var canvasHidden = document.createElement('canvas')
     var ctxHidden = canvasHidden.getContext('2d')
     var canvasShown = document.querySelector('canvas')
-    canvasShown.width = width
-    canvasShown.height = height
+    canvasShown.width = width - 20
+    canvasShown.height = height + 10
     var ctxShown = canvasShown.getContext('2d')
 
-    function glitch() {
+    function glitch1() {
       var swidth = width - Math.random() * 100
       var sheight = height - Math.random() * 100
       var dwidth = width / 2 - Math.random() * 100
@@ -57,8 +57,34 @@ export default {
 
       var x = Math.random() * width
       var y = Math.random() * height
-      var dx = x + (Math.random() * 100 + 20)
-      var dy = y + (Math.random() * 100 + 15)
+      var dx = x + (Math.random() * 100)
+      var dy = y + (Math.random() * 100)
+
+      ctxShown.clearRect(x, y, swidth, sheight)
+      ctxShown.fillStyle = '#FFF'
+      ctxShown.fillRect(x, y, dwidth, dheight)
+      ctxShown.drawImage(
+        canvasHidden,
+        x,
+        y,
+        swidth,
+        sheight,
+        dx,
+        dy,
+        dwidth,
+        dheight
+      )
+    }
+        function glitch2() {
+      var swidth = width - Math.random() * 100
+      var sheight = height - Math.random() * 100
+      var dwidth = width / 2 - Math.random() * 100
+      var dheight = height / 2 - Math.random() * 100
+
+      var x = Math.random() * width
+      var y = Math.random() * height
+      var dx = x + (Math.random() * 100)
+      var dy = y + (Math.random() * 100)
 
       ctxShown.clearRect(x, y, swidth, sheight)
       ctxShown.fillStyle = '#000'
@@ -77,7 +103,8 @@ export default {
     }
 
     setInterval(function () {
-      glitch()
+      glitch1()
+      glitch2()
     }, 1000 / 25)
   },
   methods: {
