@@ -24,6 +24,7 @@
     </div>
     <canvas
       v-show="hover"
+      :id="id"
       class="absolute top-0"
       style="z-index: 1; margin-left: -7px; margin-top: -7px"
     >
@@ -34,6 +35,12 @@
 export default {
   name: 'CyButton',
   inheritAttrs: false,
+  props: {
+    id: {
+      type: String,
+      default: '1'
+    }
+  },
   data() {
     return {
       hover: false,
@@ -42,10 +49,10 @@ export default {
   mounted() {
     let width = this.$el.offsetWidth
     let height = this.$el.offsetHeight
-    var canvasHidden = document.createElement('canvas')
+    var canvasHidden = document.getElementById(this.id)
     var ctxHidden = canvasHidden.getContext('2d')
-    var canvasShown = document.querySelector('canvas')
-    canvasShown.width = width - 20
+    var canvasShown = document.getElementById(this.id)
+    canvasShown.width = width + 10
     canvasShown.height = height + 10
     var ctxShown = canvasShown.getContext('2d')
 

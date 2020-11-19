@@ -30,7 +30,7 @@
             We craft beautiful apps and strive for a better web.
           </div>
           <div class="mt-24 sm:mt-8 lg:mt-24" style="width: 11rem">
-            <CyButton data-text="CONTACT US" class="glitch" @click="clicked"
+            <CyButton id="1" data-text="CONTACT US" class="glitch" @click="clicked"
               >Contact Us</CyButton
             >
           </div>
@@ -212,7 +212,7 @@
         </p>
         <div class="flex justify-center mt-4">
           <div style="width: 13rem">
-            <CyButton @click="clicked">Terms &amp; Privacy</CyButton>
+            <CyButton id="2" @click="clicked">Terms &amp; Privacy</CyButton>
           </div>
         </div>
       </div>
