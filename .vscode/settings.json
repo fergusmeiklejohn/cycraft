@@ -9,7 +9,7 @@
   // make sure vetur is enabled
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
   "vetur.experimental.templateInterpolationService": false,
-  "vetur.format.enable": false,
+  "vetur.format.enable": true,
   "vetur.validation.style": true,
   "vetur.validation.template": true,
   "vetur.validation.script": true,
