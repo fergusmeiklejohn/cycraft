@@ -1,11 +1,12 @@
 <template>
   <button
     id="cy-button"
-    class="relative btn bg-white border-2 border-white hover:bg-btn-light-green focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-black button-text"
+    class="relative btn bg-white border-2 border-white focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-black button-text"
     v-bind="$attrs"
     v-on="$listeners"
     @mouseenter="setHoverOn"
     @mouseleave="setHoverOff"
+    @click="setHoverOff"
   >
     <div class="absolute inset-0">
       <div class="inline-flex items-center justify-center py-3 px-4">

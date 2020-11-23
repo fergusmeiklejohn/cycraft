@@ -1,5 +1,5 @@
 <template>
-  <div style="max-width: 1366px" class="bg-black flex justify-center h-auto">
+  <div class="bg-black flex justify-center h-auto">
     <div
       class="flex-col min-width-full justify-center"
       style="max-width: 1100px"
@@ -234,7 +234,6 @@ export default {
     Monster,
     CyButton,
   },
-  props: {},
   methods: {
     clicked() {
       console.log('clicked')
