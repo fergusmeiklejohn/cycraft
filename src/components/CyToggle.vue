@@ -1,6 +1,9 @@
 <template>
   <label class="cy-toggle">
-    <input type="checkbox" @click="toggle" />
+    <input
+      type="checkbox"
+      @click="toggle"
+    />
     <span class="slider round"> </span>
   </label>
 </template>
@@ -56,14 +59,14 @@ export default {
   left: 4px
   bottom: 4px
   background-color: white
-  background-image: url(../assets/cy-icon-black-on-white.svg)
+  background-image: url(/cy-icon-black-on-white.svg)
   transition: 0.4s
 
 input:checked + .slider
   background-color: #7c7c7c
 
 input:checked + .slider:before
-  background-image: url(../assets/cy-icon-white-on-black.svg)
+  background-image: url(/cy-icon-white-on-black.svg)
 
 input:checked + .slider:before
   transform: translateX(26px)

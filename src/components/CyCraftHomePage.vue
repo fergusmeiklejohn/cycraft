@@ -13,26 +13,39 @@
       </div>
       <!-- Hero -->
       <div class="flex">
-        <div
-          class="hidden sm:flex sm:items-end pt-24 sm:pl-12 sm:pr-4 md:pr-10 lg:pr-20"
-        >
+        <div class="hidden sm:flex sm:items-end pt-24 sm:pl-12 sm:pr-4 md:pr-10 lg:pr-20">
           <!-- CyCraft Logo -->
           <div class="object-contain sm:max-w-xs md:max-w-none">
-            <img src="../assets/CyCraft Logo.svg" alt="" />
+            <img
+              src="/CyCraft Logo.svg"
+              alt=""
+            />
           </div>
         </div>
         <!-- Title Text & Button-->
         <div class="flex-col pt-10 px-10 mt-16 sm:mt-32 sm:mr-4">
-          <div class="main-title text-white" style="max-width: 300px">
+          <div
+            class="main-title text-white"
+            style="max-width: 300px"
+          >
             We Craft without cruft.
           </div>
-          <div class="main-subtitle text-white pt-6" style="max-width: 370px">
+          <div
+            class="main-subtitle text-white pt-6"
+            style="max-width: 370px"
+          >
             We craft beautiful apps and strive for a better web.
           </div>
-          <div class="mt-24 sm:mt-8 lg:mt-24" style="width: 11rem">
-            <CyButton id="1" data-text="CONTACT US" class="glitch" @click="clicked"
-              >Contact Us</CyButton
-            >
+          <div
+            class="mt-24 sm:mt-8 lg:mt-24"
+            style="width: 11rem"
+          >
+            <CyButton
+              id="1"
+              data-text="CONTACT US"
+              class="glitch"
+              @click="clicked"
+            >Contact Us</CyButton>
           </div>
         </div>
       </div>
@@ -43,20 +56,72 @@
           <div class="title-text text-white">Projects</div>
         </div>
         <!-- Project Grid -->
-        <div class="grid gap-10 md:gap-20 grid-cols-1 sm:grid-cols-2">
-          <project
-            v-for="p in 4"
-            :key="p"
-            title="popicons"
-            img="../assets/martin.jpg"
-            class=""
-          />
+        <div class="grid gap-10 md:gap-20 grid-cols-1">
+          <!-- Pepicons -->
+          <div class="flex-col">
+            <div class="flex items-center">
+              <span class="text-white project-title">Pepicons</span>
+              <div class="line"></div>
+            </div>
+            <div class="relative mx-auto mt-3">
+              <img
+                class="h-full w-full"
+                src="/pepicons.png"
+                alt="Project Photo"
+              />
+            </div>
+          </div>
+          <!-- Cinematch -->
+          <div class="flex-col">
+            <div class="flex items-center">
+              <span class="text-white project-title">Cinematch</span>
+              <div class="line"></div>
+            </div>
+            <div class="relative mx-auto mt-3">
+              <img
+                class="h-full w-full"
+                src="/cinematch.png"
+                alt="Project Photo"
+              />
+            </div>
+          </div>
+          <!-- Cinematch -->
+          <div class="flex-col">
+            <div class="flex items-center">
+              <span class="text-white project-title">UBI Calculator</span>
+              <div class="line"></div>
+            </div>
+            <div class="relative mx-auto mt-3">
+              <img
+                class="h-full w-full"
+                src="/ubi.png"
+                alt="Project Photo"
+              />
+            </div>
+          </div>
+          <!-- Cinematch -->
+          <div class="flex-col">
+            <div class="flex items-center">
+              <span class="text-white project-title">Peer Learning</span>
+              <div class="line"></div>
+            </div>
+            <div class="relative mx-auto mt-3">
+              <img
+                class="h-full w-full"
+                src="/peer-learning.png"
+                alt="Project Photo"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <!-- How we design and code -->
       <div class="mx-10 pb-64 pt-8">
         <div class="grid grid-cols-1 sm:grid-cols-2">
-          <div class="w-5/6 sm:ml-10" style="max-width: 403px">
+          <div
+            class="w-5/6 sm:ml-10"
+            style="max-width: 403px"
+          >
             <div class="flex pb-4">
               <div class="title-text text-white">How we design</div>
               <svg
@@ -64,7 +129,10 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 28 23.721"
               >
-                <g id="Layer_1" data-name="Layer 1">
+                <g
+                  id="Layer_1"
+                  data-name="Layer 1"
+                >
                   <path
                     id="Path_18"
                     data-name="Path 18"
@@ -89,7 +157,10 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 28 23.721"
               >
-                <g id="Layer_1" data-name="Layer 1">
+                <g
+                  id="Layer_1"
+                  data-name="Layer 1"
+                >
                   <path
                     id="Path_18"
                     data-name="Path 18"
@@ -124,7 +195,7 @@
             <div class="flex mt-2">
               <img
                 class="w-10 h-10 sm:w-56 sm:h-56 rounded-full mr-4"
-                src="../assets/martin.jpg"
+                src="/martin.jpg"
                 alt="Avatar"
               />
               <div class="flex-col sm:ml-4">
@@ -141,7 +212,7 @@
                   >
                     <img
                       class="h-6 sm:h-10"
-                      src="../assets/Twitter_Logo.svg"
+                      src="/Twitter_Logo.svg"
                       alt="Twitter Logo"
                     />
                     <p class="text-white about-us-body">Twitter</p>
@@ -151,7 +222,10 @@
                     target="_blank"
                     class="flex items-center ml-3"
                   >
-                    <img class="h-4 sm:h-6" src="../assets/Github_Mark.svg" />
+                    <img
+                      class="h-4 sm:h-6"
+                      src="/Github_Mark.svg"
+                    />
                     <p class="text-white about-us-body ml-1">Github</p>
                   </a>
                 </div>
@@ -175,7 +249,7 @@
               <div class="flex mt-2 sm:flex-row-reverse">
                 <img
                   class="w-10 h-10 sm:w-56 sm:h-56 rounded-full mr-4 sm:mr-0"
-                  src="../assets/martin.jpg"
+                  src="/martin.jpg"
                   alt="Avatar"
                 />
                 <div class="flex-col sm:ml-4">
@@ -192,8 +266,14 @@
       </div>
       <!-- Contact Us logo -->
       <div class="mx-10 mt-20 pb-8">
-        <a style="cursor: pointer" @click="clicked">
-          <img src="../assets/Contact Us@2x.png" alt="Contact Us Button" />
+        <a
+          style="cursor: pointer"
+          @click="clicked"
+        >
+          <img
+            src="/Contact Us@2x.png"
+            alt="Contact Us Button"
+          />
         </a>
       </div>
       <!-- English or Japanese -->
@@ -212,7 +292,10 @@
         </p>
         <div class="flex justify-center mt-4">
           <div style="width: 13rem">
-            <CyButton id="2" @click="clicked">Terms &amp; Privacy</CyButton>
+            <CyButton
+              id="2"
+              @click="clicked"
+            >Terms &amp; Privacy</CyButton>
           </div>
         </div>
       </div>
@@ -221,7 +304,6 @@
 </template>
 
 <script>
-import Project from './Project.vue'
 import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
 import CyButton from './CyButton.vue'
@@ -229,7 +311,6 @@ import CyButton from './CyButton.vue'
 export default {
   name: 'CycraftHomePage',
   components: {
-    Project,
     CyToggle,
     Monster,
     CyButton,

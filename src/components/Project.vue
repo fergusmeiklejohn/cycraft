@@ -4,10 +4,10 @@
       <span class="text-white project-title">{{ title }}</span>
       <div class="line"></div>
     </div>
-    <div class="relative mx-auto mt-3" style="padding-bottom: 100%">
+    <div class="relative mx-auto mt-3">
       <img
-        class="absolute h-full w-full object-cover"
-        src="../assets/martin.jpg"
+        class="h-full w-full"
+        src="@/assets/pepicons.png"
         alt="Project Photo"
       />
     </div>
@@ -27,7 +27,7 @@ export default {
     },
     img: {
       type: String,
-      default: '',
+      default: '@/assets/pepicons.png',
     },
   },
 }
