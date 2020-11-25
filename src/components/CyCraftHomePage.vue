@@ -25,13 +25,13 @@
         <!-- Title Text & Button-->
         <div class="flex-col pt-10 px-10 mt-16 sm:mt-32 sm:mr-4">
           <div
-            class="main-title text-white"
+            class="landing-page-title"
             style="max-width: 300px"
           >
             We Craft without cruft.
           </div>
           <div
-            class="main-subtitle text-white pt-6"
+            class="landing-page-subtitle pt-6"
             style="max-width: 370px"
           >
             We craft beautiful apps and strive for a better web.
@@ -50,80 +50,44 @@
         </div>
       </div>
       <!-- Projects Section -->
-      <div class="mx-10 mb-64 mt-64">
+      <div class="mx-0 sm:mx-10 mb-64 mt-64">
         <!-- Section Title -->
         <div class="flex justify-start mb-6">
-          <div class="title-text text-white">Projects</div>
+          <div class="pl-4 sm:pl-0 text-h2">Our Projects</div>
         </div>
         <!-- Project Grid -->
         <div class="grid gap-10 md:gap-20 grid-cols-1">
-          <!-- Pepicons -->
-          <div class="flex-col">
-            <div class="flex items-center">
-              <span class="text-white project-title">Pepicons</span>
-              <div class="line"></div>
-            </div>
-            <div class="relative mx-auto mt-3">
-              <img
-                class="h-full w-full"
-                src="/pepicons.png"
-                alt="Project Photo"
-              />
-            </div>
-          </div>
-          <!-- Cinematch -->
-          <div class="flex-col">
-            <div class="flex items-center">
-              <span class="text-white project-title">Cinematch</span>
-              <div class="line"></div>
-            </div>
-            <div class="relative mx-auto mt-3">
-              <img
-                class="h-full w-full"
-                src="/cinematch.png"
-                alt="Project Photo"
-              />
-            </div>
-          </div>
-          <!-- Cinematch -->
-          <div class="flex-col">
-            <div class="flex items-center">
-              <span class="text-white project-title">UBI Calculator</span>
-              <div class="line"></div>
-            </div>
-            <div class="relative mx-auto mt-3">
-              <img
-                class="h-full w-full"
-                src="/ubi.png"
-                alt="Project Photo"
-              />
-            </div>
-          </div>
-          <!-- Cinematch -->
-          <div class="flex-col">
-            <div class="flex items-center">
-              <span class="text-white project-title">Peer Learning</span>
-              <div class="line"></div>
-            </div>
-            <div class="relative mx-auto mt-3">
-              <img
-                class="h-full w-full"
-                src="/peer-learning.png"
-                alt="Project Photo"
-              />
-            </div>
-          </div>
+          <Project
+            title="Pepicons"
+            img="/pepicons.png"
+            description="Pepicons is a grand total of 118 hand-crafted icons — and counting! This completely original icon set is made in two retro variants: Pop! and Print. A live preview on the website allows you to play around with all the variations the icon pack has to offer."
+          />
+          <Project
+            title="Cinematch"
+            img="/cinematch.png"
+            description="With the help of CineMatch a user can create film watchlists and share them with friends. This neat app has a clean user interface that organizes the user’s lists beautifully and with simplicity."
+          />
+          <Project
+            title="UBI Calculator"
+            img="/cinematch.png"
+            description="Ever wonder how you might benefit through a Universal Basic Income? The UBI Calculator is an ingenius plugin that allows a user to calculate their exact earnings with different UBI plans."
+          />
+          <Project
+            title="Peer Learning"
+            img="/peer-learning.png"
+            description="PeerLearning is an online education software bringing students together to collaborate and learn from one another. Funded by education-focused grants, this software has the benefit of current user testing."
+          />
         </div>
       </div>
       <!-- How we design and code -->
       <div class="mx-10 pb-64 pt-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2">
+        <div class="grid grid-cols-10 sm:grid-cols-2">
           <div
-            class="w-5/6 sm:ml-10"
+            class="sm:ml-10 col-start-1 col-span-8"
             style="max-width: 403px"
           >
             <div class="flex pb-4">
-              <div class="title-text text-white">How we design</div>
+              <div class="text-h2">How we design</div>
               <svg
                 class="w-4 sm:w-6 ml-2"
                 xmlns="http://www.w3.org/2000/svg"
@@ -142,16 +106,16 @@
                 </g>
               </svg>
             </div>
-            <div class="about-us-body text-white">
+            <div class="text-h4">
               With clarity and focus, we enable the user to engage with purpose.
             </div>
           </div>
           <div
-            class="w-5/6 mt-16 sm:mt-24 sm:ml-10 md:ml-12 lg:ml-16"
+            class="mt-16 sm:mt-24 sm:ml-10 md:ml-12 lg:ml-16 col-start-2 col-span-9"
             style="max-width: 403px"
           >
-            <div class="flex pb-4">
-              <div class="title-text text-white">How we code</div>
+            <div class="flex pb-4 justify-end sm:justify-start">
+              <div class="text-h2">How we code</div>
               <svg
                 class="w-4 sm:w-6 ml-2"
                 xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +134,7 @@
                 </g>
               </svg>
             </div>
-            <div class="about-us-body text-white">
+            <div class="text-h4 text-right sm:text-left">
               Matching the beauty of the design, our code is modern, concise,
               and adaptive.
             </div>
@@ -307,6 +271,7 @@
 import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
 import CyButton from './CyButton.vue'
+import Project from './Project.vue'
 
 export default {
   name: 'CycraftHomePage',
@@ -314,6 +279,7 @@ export default {
     CyToggle,
     Monster,
     CyButton,
+    Project,
   },
   methods: {
     clicked() {
@@ -327,82 +293,28 @@ export default {
 </script>
 
 <style lang="sass">
-.main-title
-  font-size: 48px
-  line-height: 58px
-  font-weight: 700
-  letter-spacing: 0.06em
-  text-transform: uppercase
-@media (min-width: 640px)
-  .main-title
-    font-size: 40px
-    line-height: 49px
-    font-weight: 500
+@import './src/assets/typography.sass'
+.landing-page-title
+  +header-globals()
+  font-style: normal
+  font-weight: 500
+  font-size: 40px
+  line-height: 49px
+  @media (max-width: 640px)
+    font-weight: 800
+    font-size: 48px
+    line-height: 58px
     letter-spacing: 0.025em
-    text-transform: none
-
-.main-subtitle
+    text-transform: uppercase
+.landing-page-subtitle
+  +header-globals()
+  font-style: normal
+  font-weight: 500
   font-size: 20px
   line-height: 28px
-  font-weight: 300
-  letter-spacing: 0.001em
-
-.title-text
-  font-size: 20px
-  line-height: 28px
-  font-weight: 300
-  letter-spacing: 0.001em
-@media (min-width: 640px)
-  .title-text
-    font-size: 40px
-    line-height: 49px
-    font-weight: 500
-    letter-spacing: 0.025em
-
-.about-us-body
-  font-size: 12px
-  font-weight: 300
-  line-height: 15px
-  letter-spacing: 0.028
-@media (min-width: 640px)
-  .about-us-body
-    font-size: 20px
-    line-height: 28px
-
-.button-text
-  font-size: 14px
-  line-height: 18px
-  font-weight: 700
-  letter-spacing: 0.024em
-  text-transform: uppercase
-
-.project-title
-  font-size: 14px
-  line-height: 18px
-  font-weight: 600
-  letter-spacing: 0.07em
-  text-transform: uppercase
-@media (min-width: 640px)
-  .project-title
-    font-size: 20px
-    line-height: 28px
-    letter-spacing: 0.1em
-
-.name-title
-  font-size: 14px
-  font-weight: 600
-  line-height: 18px
-  letter-spacing: 0.08em
-  text-transform: uppercase
-@media (min-width: 640px)
-  .name-title
-    font-size: 20px
-    line-height: 28px
-
 .line
   background: white
   height: 1px
-  width: 100%
 
 .tadaki-line-margin
   margin-right: 20px

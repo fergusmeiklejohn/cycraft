@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap")
-@import 'colors'
 
 // $thin: 100
 // $extra-light: 200
@@ -14,6 +13,7 @@ $extra-bold: 800
 
 =header-globals()
   font-family: 'Montserrat', sans-serif
+  color: #FFFFFF
 
 =t-h1()
   +header-globals()
@@ -29,6 +29,9 @@ $extra-bold: 800
   line-height: 49px
   font-weight: $medium
   letter-spacing: 0.025em
+  @media (max-width: 640px)
+    font-size: 24px
+    line-height: 28px
 
 =t-h3()
   +header-globals()
@@ -37,6 +40,9 @@ $extra-bold: 800
   font-weight: $bold
   letter-spacing: 0.1em
   text-transform: uppercase
+  @media (max-width: 640px)
+    font-size: 14px
+    line-height: 18px
 
 =t-h4()
   +header-globals()
@@ -44,6 +50,9 @@ $extra-bold: 800
   line-height: 28px
   font-weight: $medium
   letter-spacing: 0.001em
+  @media (max-width: 640px)
+    font-size: 16px
+    line-height: 20px
 
 =t-h5()
   +header-globals()
