@@ -1,15 +1,15 @@
 <template>
   <div id="app" class="bg-black flex justify-center">
     <!-- Left glitches descending order -->
-    <img src="@/assets/LeftSideGlitch.png" class="side-glitch-1 blink-image-1" :class="{ showSideGlitch: !scrolling }">
-    <img src="@/assets/LeftSideGlitch.png" class="side-glitch-2 blink-image-3" :class="{ showSideGlitch: !scrolling }">
-    <img src="@/assets/LeftSideGlitch.png" class="side-glitch-3 blink-image-2" :class="{ showSideGlitch: !scrolling }">
-    <img src="@/assets/LeftSideGlitch.png" class="side-glitch-4 blink-image-3" :class="{ showSideGlitch: !scrolling }">
+    <img src="@/assets/SideGlitchAlt3.png" class="side-glitch-1 blink-image-1" :class="{ showSideGlitch: !scrolling }">
+    <img src="@/assets/SideGlitchAlt1.png" class="side-glitch-2 blink-image-3" :class="{ showSideGlitch: !scrolling }">
+    <img src="@/assets/SideGlitchAlt2.png" class="side-glitch-3 blink-image-2" :class="{ showSideGlitch: !scrolling }">
+    <img src="@/assets/SideGlitchAlt4.png" class="side-glitch-4 blink-image-3" :class="{ showSideGlitch: !scrolling }">
      <!-- Right glitches descending order -->
-    <img src="@/assets/RightSideGlitch.png" class="side-glitch-5 blink-image-2" :class="{ showSideGlitch: !scrolling }">
-    <img src="@/assets/RightSideGlitch.png" class="side-glitch-6 blink-image-1" :class="{ showSideGlitch: !scrolling }">
-    <img src="@/assets/RightSideGlitch.png" class="side-glitch-7 blink-image 3" :class="{ showSideGlitch: !scrolling }">
-    <img src="@/assets/RightSideGlitch.png" class="side-glitch-8 blink-image-1" :class="{ showSideGlitch: !scrolling }">
+    <img src="@/assets/SideGlitchAlt5.png" class="side-glitch-5 blink-image-2" :class="{ showSideGlitch: !scrolling }">
+    <img src="@/assets/SideGlitchAlt6.png" class="side-glitch-6 blink-image-1" :class="{ showSideGlitch: !scrolling }">
+    <img src="@/assets/SideGlitchAlt7.png" class="side-glitch-7 blink-image 3" :class="{ showSideGlitch: !scrolling }">
+    <img src="@/assets/SideGlitchAlt8.png" class="side-glitch-8 blink-image-1" :class="{ showSideGlitch: !scrolling }">
 
     <CyCraftHomePage />
   </div>
