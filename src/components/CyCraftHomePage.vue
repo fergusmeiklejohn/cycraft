@@ -146,9 +146,9 @@
         <div class="text-h2">About Us</div>
         <!-- Luca -->
         <div class="flex-col mt-8 pb-8">
-          <div class="sm:w-5/6 sm:mt-10">
+          <div class="w-full md:w-5/6 sm:mt-10">
             <div class="flex items-center mb-4">
-              <span class="text-h3 pl-4 whitespace-no-wrap">Luca Ban</span>
+              <span class="text-h3 pl-0 sm:pl-4 whitespace-no-wrap">Luca Ban</span>
               <span class="line ml-4 w-full"></span>
             </div>
             <div class="flex mt-2">
@@ -157,13 +157,13 @@
                 src="/martin.jpg"
                 alt="Avatar"
               />
-              <div class="flex-col pl-4 pr-24">
+              <div class="flex-col pl-0 sm:pl-4 pr-0 sm:pr-24">
                 <p class="text-h4 ">
                   Has been a technology enthusiast since birth. He thinks of
                   writing code as nothing less than poetry. Believes everything
                   is possible — talent is a skill you teach yourself.
                 </p>
-                <div class="flex items-center mt-6">
+                <div class="flex flex-wrap items-center mt-6">
                   <a
                     href="https://twitter.com/Mesqueeb"
                     target="_blank"
@@ -174,12 +174,12 @@
                       src="/Twitter_Logo.svg"
                       alt="Twitter Logo"
                     />
-                    <p class="text-h3 ml-1">Twitter</p>
+                    <p class="text-h3 ml-1 mr-6">Twitter</p>
                   </a>
                   <a
                     href="https://github.com/mesqueeb"
                     target="_blank"
-                    class="flex items-center ml-6"
+                    class="flex items-center"
                   >
                     <img
                       class="h-4 sm:h-8"
@@ -194,11 +194,13 @@
         </div>
         <!-- Tadaki -->
         <div class="flex-col mt-8 pb-8">
-          <div class="flex sm:justify-end">
-            <div class="sm:w-5/6 sm:mt-10">
+          <div class="flex justify-start sm:justify-end">
+            <div class="w-full md:w-5/6 sm:mt-10">
               <div class="flex items-center mb-4">
-                <span class="line mr-4 ml-4 w-full"></span>
-                <span class="text-h3 pr-4 whitespace-no-wrap">Tadaki Matsushita</span>
+                <span class="line hidden sm:block mr-4 ml-4 w-full"></span>
+                <span class="text-h3 pr-0 sm:pr-4 whitespace-no-wrap">Tadaki Matsushita</span>
+                <span class="line block sm:hidden ml-4 w-full"></span>
+
               </div>
               <div class="flex mt-2 sm:flex-row-reverse">
                 <img
@@ -206,7 +208,7 @@
                   src="/martin.jpg"
                   alt="Avatar"
                 />
-                <div class="flex-col pl-24 pr-4">
+                <div class="flex-col pl-0 sm:pl-24 pr-0 sm:pr-4">
                   <p class="text-h4">
                     Self taught coder. He has helped companies all over Japan
                     turn their vision into code. Excels at web marketing; and
