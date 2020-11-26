@@ -81,9 +81,9 @@
       </div>
       <!-- How we design and code -->
       <div class="mx-10 pb-64 pt-8">
-        <div class="grid grid-cols-10 sm:grid-cols-2">
+        <div class="flex flex-col">
           <div
-            class="sm:ml-10 col-start-1 col-span-8"
+            class=""
             style="max-width: 403px"
           >
             <div class="flex pb-4">
@@ -110,51 +110,46 @@
               With clarity and focus, we enable the user to engage with purpose.
             </div>
           </div>
-          <div
-            class="mt-16 sm:mt-24 sm:ml-10 md:ml-12 lg:ml-16 col-start-2 col-span-9"
-            style="max-width: 403px"
-          >
-            <div class="flex pb-4 justify-end sm:justify-start">
-              <div class="text-h2">How we code</div>
-              <svg
-                class="w-4 sm:w-6 ml-2"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 28 23.721"
-              >
-                <g
-                  id="Layer_1"
-                  data-name="Layer 1"
+          <div class="mt-16 sm:mt-24 flex justify-end">
+
+            <div style="max-width: 403px">
+              <div class="flex pb-4 justify-end sm:justify-start">
+                <div class="text-h2">How we code</div>
+                <svg
+                  class="w-4 sm:w-6 ml-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 28 23.721"
                 >
-                  <path
-                    id="Path_18"
-                    data-name="Path 18"
-                    d="M18.665,4.665V0h-14V4.665H0v14H4.665v5.056H9.721V18.665H14v5.056h5.056V18.665H28v-14Zm-4.274,9.726H9.721V9.721h4.67Zm8.944,0h-4.67V9.721h4.67Z"
-                    fill="#fff"
-                  />
-                </g>
-              </svg>
-            </div>
-            <div class="text-h4 text-right sm:text-left">
-              Matching the beauty of the design, our code is modern, concise,
-              and adaptive.
+                  <g
+                    id="Layer_1"
+                    data-name="Layer 1"
+                  >
+                    <path
+                      id="Path_18"
+                      data-name="Path 18"
+                      d="M18.665,4.665V0h-14V4.665H0v14H4.665v5.056H9.721V18.665H14v5.056h5.056V18.665H28v-14Zm-4.274,9.726H9.721V9.721h4.67Zm8.944,0h-4.67V9.721h4.67Z"
+                      fill="#fff"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="text-h4 text-right sm:text-left">
+                Matching the beauty of the design, our code is modern, concise,
+                and adaptive.
+              </div>
             </div>
           </div>
         </div>
       </div>
       <!-- About Us -->
       <div class="mx-10 pb-64 pt-20">
-        <div class="title-text text-white">About Us</div>
+        <div class="text-h2">About Us</div>
         <!-- Luca -->
         <div class="flex-col mt-8 pb-8">
-          <div class="sm:w-3/4 sm:mt-10">
-            <div class="flex items-center">
-              <div
-                class="text-white name-title"
-                style="white-space: nowrap; margin-right: 20px"
-              >
-                Luca Ban
-              </div>
-              <div class="line"></div>
+          <div class="sm:w-5/6 sm:mt-10">
+            <div class="flex items-center mb-4">
+              <span class="text-h3 pl-4 whitespace-no-wrap">Luca Ban</span>
+              <span class="line ml-4 w-full"></span>
             </div>
             <div class="flex mt-2">
               <img
@@ -162,35 +157,35 @@
                 src="/martin.jpg"
                 alt="Avatar"
               />
-              <div class="flex-col sm:ml-4">
-                <p class="about-us-body text-white sm:w-11/12">
+              <div class="flex-col pl-4 pr-24">
+                <p class="text-h4 ">
                   Has been a technology enthusiast since birth. He thinks of
                   writing code as nothing less than poetry. Believes everything
                   is possible — talent is a skill you teach yourself.
                 </p>
-                <div class="flex items-center mt-2">
+                <div class="flex items-center mt-6">
                   <a
                     href="https://twitter.com/Mesqueeb"
                     target="_blank"
                     class="flex items-center"
                   >
                     <img
-                      class="h-6 sm:h-10"
+                      class="h-6 sm:h-12"
                       src="/Twitter_Logo.svg"
                       alt="Twitter Logo"
                     />
-                    <p class="text-white about-us-body">Twitter</p>
+                    <p class="text-h3 ml-1">Twitter</p>
                   </a>
                   <a
                     href="https://github.com/mesqueeb"
                     target="_blank"
-                    class="flex items-center ml-3"
+                    class="flex items-center ml-6"
                   >
                     <img
-                      class="h-4 sm:h-6"
+                      class="h-4 sm:h-8"
                       src="/Github_Mark.svg"
                     />
-                    <p class="text-white about-us-body ml-1">Github</p>
+                    <p class="text-h3 ml-3">Github</p>
                   </a>
                 </div>
               </div>
@@ -200,15 +195,10 @@
         <!-- Tadaki -->
         <div class="flex-col mt-8 pb-8">
           <div class="flex sm:justify-end">
-            <div class="sm:w-3/4 sm:mt-10">
-              <div class="flex items-center sm:flex-row-reverse">
-                <div
-                  class="text-white name-title tadaki-line-margin"
-                  style="white-space: nowrap"
-                >
-                  Tadaki Matsushita
-                </div>
-                <div class="line"></div>
+            <div class="sm:w-5/6 sm:mt-10">
+              <div class="flex items-center mb-4">
+                <span class="line mr-4 ml-4 w-full"></span>
+                <span class="text-h3 pr-4 whitespace-no-wrap">Tadaki Matsushita</span>
               </div>
               <div class="flex mt-2 sm:flex-row-reverse">
                 <img
@@ -216,12 +206,26 @@
                   src="/martin.jpg"
                   alt="Avatar"
                 />
-                <div class="flex-col sm:ml-4">
-                  <p class="about-us-body text-white sm:w-11/12">
+                <div class="flex-col pl-24 pr-4">
+                  <p class="text-h4">
                     Self taught coder. He has helped companies all over Japan
                     turn their vision into code. Excels at web marketing; and
                     currently loves automation.
                   </p>
+                  <div class="flex items-center mt-6">
+
+                    <a
+                      href="https://github.com/mesqueeb"
+                      target="_blank"
+                      class="flex items-center"
+                    >
+                      <img
+                        class="h-4 sm:h-8"
+                        src="/Github_Mark.svg"
+                      />
+                      <p class="text-h3 ml-3">Github</p>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -242,20 +246,20 @@
       </div>
       <!-- English or Japanese -->
       <div class="mx-10 mt-4 sm:mt-24 md:mt-32 flex-col justify-end">
-        <p class="text-white uppercase text-sm tracking-widest text-center">
+        <p class="text-h3 text-center">
           English? or Japanese?
         </p>
-        <div class="flex justify-center mt-2">
+        <div class="flex justify-center mt-4">
           <cy-toggle @input="toggled" />
         </div>
       </div>
       <!-- Copyright and Terms -->
-      <div class="mx-10 mt-16 sm:mt-24 md:mt-32 pb-16 flex-col justify-end">
-        <p class="text-white uppercase text-sm tracking-widest text-center">
+      <div class="mx-10 mt-16 sm:mt-32 md:mt-48 pb-16 flex-col justify-end">
+        <p class="text-h3 text-center">
           &copy; 2020 CyCraft
         </p>
         <div class="flex justify-center mt-4">
-          <div style="width: 13rem">
+          <div style="width: 14rem">
             <CyButton
               id="2"
               @click="clicked"
