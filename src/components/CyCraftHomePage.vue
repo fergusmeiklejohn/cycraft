@@ -79,6 +79,7 @@
           />
         </div>
       </div>
+      <Frameworks />
       <!-- How we design and code -->
       <div class="mx-10 pb-64 pt-8">
         <div class="flex flex-col">
@@ -278,6 +279,7 @@ import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
 import CyButton from './CyButton.vue'
 import Project from './Project.vue'
+import Frameworks from './Frameworks.vue'
 
 export default {
   name: 'CycraftHomePage',
@@ -286,6 +288,7 @@ export default {
     Monster,
     CyButton,
     Project,
+    Frameworks,
   },
   methods: {
     clicked() {
@@ -321,11 +324,4 @@ export default {
 .line
   background: white
   height: 1px
-
-.tadaki-line-margin
-  margin-right: 20px
-@media (min-width: 640px)
-  .tadaki-line-margin
-    margin-right: 0px
-    margin-left: 20px
 </style>
