@@ -1,7 +1,7 @@
 <template>
   <button
     id="cy-button"
-    class="relative btn bg-white border-2 border-white focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-black button-text"
+    class="relative btn bg-white border-2 border-white focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-h5 text-black"
     v-bind="$attrs"
     v-on="$listeners"
     @mouseenter="setHoverOn"
@@ -15,11 +15,11 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 13.9 17"
         >
-          <path
-            d="M11.332,2.734V0h-8.5V2.734H0v8.2H2.832V13.9H5.9V10.937H8.5V13.9h3.07V10.937H17v-8.2Zm-2.595,5.7H5.9V5.7H8.737Zm5.43,0H11.332V5.7h2.835Z"
-          />
+          <path d="M11.332,2.734V0h-8.5V2.734H0v8.2H2.832V13.9H5.9V10.937H8.5V13.9h3.07V10.937H17v-8.2Zm-2.595,5.7H5.9V5.7H8.737Zm5.43,0H11.332V5.7h2.835Z" />
         </svg>
-        <span><slot></slot></span>
+        <span>
+          <slot></slot>
+        </span>
       </div>
     </div>
     <canvas
@@ -38,8 +38,8 @@ export default {
   props: {
     id: {
       type: String,
-      default: '1'
-    }
+      default: '1',
+    },
   },
   data() {
     return {
@@ -64,25 +64,15 @@ export default {
 
       var x = Math.random() * width
       var y = Math.random() * height
-      var dx = x + (Math.random() * 100)
-      var dy = y + (Math.random() * 100)
+      var dx = x + Math.random() * 100
+      var dy = y + Math.random() * 100
 
       ctxShown.clearRect(x, y, swidth, sheight)
       ctxShown.fillStyle = '#FFF'
       ctxShown.fillRect(x, y, dwidth, dheight)
-      ctxShown.drawImage(
-        canvasHidden,
-        x,
-        y,
-        swidth,
-        sheight,
-        dx,
-        dy,
-        dwidth,
-        dheight
-      )
+      ctxShown.drawImage(canvasHidden, x, y, swidth, sheight, dx, dy, dwidth, dheight)
     }
-        function glitch2() {
+    function glitch2() {
       var swidth = width - Math.random() * 100
       var sheight = height - Math.random() * 100
       var dwidth = width / 2 - Math.random() * 100
@@ -90,23 +80,13 @@ export default {
 
       var x = Math.random() * width
       var y = Math.random() * height
-      var dx = x + (Math.random() * 100)
-      var dy = y + (Math.random() * 100)
+      var dx = x + Math.random() * 100
+      var dy = y + Math.random() * 100
 
       ctxShown.clearRect(x, y, swidth, sheight)
       ctxShown.fillStyle = '#000'
       ctxShown.fillRect(x, y, dwidth, dheight)
-      ctxShown.drawImage(
-        canvasHidden,
-        x,
-        y,
-        swidth,
-        sheight,
-        dx,
-        dy,
-        dwidth,
-        dheight
-      )
+      ctxShown.drawImage(canvasHidden, x, y, swidth, sheight, dx, dy, dwidth, dheight)
     }
 
     setInterval(function () {

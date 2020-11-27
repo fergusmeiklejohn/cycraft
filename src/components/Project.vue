@@ -1,16 +1,17 @@
 <template>
-  <div class="flex-col">
-    <div class="flex items-center">
-      <span class="text-white project-title">{{ title }}</span>
-      <div class="line"></div>
+  <div class="flex-col mb-8">
+    <div class="pl-4 sm:pl-0 flex items-center">
+      <span class="text-h3 pr-4 whitespace-no-wrap">{{ title }}</span>
+      <span class="line mr-4 sm:mr-0 w-full"></span>
     </div>
-    <div class="relative mx-auto mt-3" style="padding-bottom: 100%">
+    <div class="relative mx-auto mt-3">
       <img
-        class="absolute h-full w-full object-cover"
-        src="../assets/martin.jpg"
+        class="h-full w-full"
+        :src="img"
         alt="Project Photo"
       />
     </div>
+    <div class="text-h4 pt-4 px-4 sm:pt-8 sm:px-0">{{description}}</div>
   </div>
 </template>
 <script>
@@ -23,9 +24,13 @@ export default {
     },
     title: {
       type: String,
-      default: '',
+      required: true,
     },
     img: {
+      type: String,
+      required: true,
+    },
+    description: {
       type: String,
       default: '',
     },
