@@ -50,7 +50,7 @@
         </div>
       </div>
       <!-- Projects Section -->
-      <div class="mx-0 sm:mx-10 mb-64 mt-64">
+      <div class="mx-0 sm:mx-10 mt-64">
         <!-- Section Title -->
         <div class="flex justify-start mb-6">
           <div class="pl-4 sm:pl-0 text-h2">Our Projects</div>
@@ -79,9 +79,16 @@
           />
         </div>
       </div>
-      <Frameworks />
+      <FrameworksMobile
+        class="sm:hidden mt-24"
+        style="margin-bottom: 23rem"
+      />
+      <FrameworksDesktop
+        class="hidden sm:block mt-64 mx-10"
+        style="margin-bottom: 23rem"
+      />
       <!-- How we design and code -->
-      <div class="mx-10 pb-64 pt-8">
+      <div class="mx-10">
         <div class="flex flex-col">
           <div
             class=""
@@ -279,7 +286,8 @@ import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
 import CyButton from './CyButton.vue'
 import Project from './Project.vue'
-import Frameworks from './Frameworks.vue'
+import FrameworksMobile from './FrameworksMobile.vue'
+import FrameworksDesktop from './FrameworksDesktop.vue'
 
 export default {
   name: 'CycraftHomePage',
@@ -288,7 +296,8 @@ export default {
     Monster,
     CyButton,
     Project,
-    Frameworks,
+    FrameworksMobile,
+    FrameworksDesktop,
   },
   methods: {
     clicked() {
