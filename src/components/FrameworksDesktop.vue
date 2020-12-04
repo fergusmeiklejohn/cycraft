@@ -265,14 +265,13 @@
       </div>
     </div>
     <div
-      v-if="planetar"
+      v-show="planetar"
       id="planetar"
       class="mt-6"
     >
       <div class="flex flex-row">
         <div class="w-1/2 flex flex-row justify-end">
           <svg
-            class="planetar"
             width="432"
             height="211"
             viewBox="0 0 432 211"
@@ -281,7 +280,6 @@
           >
             <path
               id="planetar-line"
-              class="path"
               d="M431 211V121.5H1V0.5"
               stroke="white"
             />
@@ -325,17 +323,13 @@
       </div>
     </div>
     <div
-      v-if="magnetar"
+      v-show="magnetar"
       id="magnetar"
       class="mt-6"
     >
 
-      <div
-        id="magnetar-line"
-        class="flex flex-row justify-center"
-      >
+      <div class="flex flex-row justify-center">
         <svg
-          class="magnetar"
           width="2"
           height="208"
           viewBox="0 0 2 208"
@@ -343,9 +337,8 @@
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            id="magnetar"
-            class="path"
-            d="M1 0V208"
+            id="magnetar-line"
+            d="M1 208V0"
             stroke="white"
           />
         </svg>
@@ -501,8 +494,7 @@
       </div>
     </div>
     <div
-      v-if="blitzar"
-      id="blitzar"
+      v-show="blitzar"
       class="mt-6"
     >
       <div class="flex flex-row">
@@ -510,7 +502,6 @@
         </div>
         <div class="w-1/2 flex flex-row justify-start">
           <svg
-            class="blitzar"
             width="449"
             height="211"
             viewBox="0 0 449 211"
@@ -518,7 +509,7 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              class="path"
+              id="blitzar-line"
               d="M1 211V121.5H448.5V0.5"
               stroke="white"
             />
@@ -568,26 +559,26 @@ export default {
       planetar: true,
       magnetar: false,
       blitzar: false,
-      animateLineId: 'planetar',
+      animateLineId: 'planetar-line',
     }
   },
   methods: {
     setPlanetar() {
-      this.animateLineId = 'planetar'
+      this.animateLineId = 'planetar-line'
       this.planetar = true
       this.magnetar = false
       this.blitzar = false
       this.animateLine()
     },
     setMagnetar() {
-      this.animateLineId = 'magnetar'
+      this.animateLineId = 'magnetar-line'
       this.planetar = false
       this.magnetar = true
       this.blitzar = false
       this.animateLine()
     },
     setBlitzar() {
-      this.animateLineId = 'blitzar'
+      this.animateLineId = 'blitzar-line'
       this.planetar = false
       this.magnetar = false
       this.blitzar = true
@@ -595,15 +586,15 @@ export default {
     },
     animateLine() {
       // const svgPath = document.querySelectorAll(`.${this.animateLineId} .path`)
-      const svgPath = document.getElementById('planetar-line')
+      const svgPath = document.getElementById(this.animateLineId)
       console.log('path: ', svgPath)
       anime({
         targets: svgPath,
-        loop: true,
+        loop: false,
         direction: 'normal',
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
-        duration: 1000,
+        duration: 700,
       })
     },
   },
