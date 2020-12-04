@@ -270,10 +270,10 @@
       class="mt-6"
     >
       <div class="flex flex-row">
-        <div class="w-1/2 flex flex-row justify-end">
+        <div class="w-1/2 flex flex-row" style="padding-left: 115px">
           <svg
+            style="flex: 1"
             width="432"
-            height="211"
             viewBox="0 0 432 211"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
