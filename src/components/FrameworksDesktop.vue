@@ -272,6 +272,7 @@
       <div class="flex flex-row">
         <div class="w-1/2 flex flex-row justify-end">
           <svg
+            class="planetar"
             width="432"
             height="211"
             viewBox="0 0 432 211"
@@ -279,6 +280,8 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
+              id="planetar-line"
+              class="path"
               d="M431 211V121.5H1V0.5"
               stroke="white"
             />
@@ -327,8 +330,12 @@
       class="mt-6"
     >
 
-      <div class="flex flex-row justify-center">
+      <div
+        id="magnetar-line"
+        class="flex flex-row justify-center"
+      >
         <svg
+          class="magnetar"
           width="2"
           height="208"
           viewBox="0 0 2 208"
@@ -336,6 +343,8 @@
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
+            id="magnetar"
+            class="path"
             d="M1 0V208"
             stroke="white"
           />
@@ -501,6 +510,7 @@
         </div>
         <div class="w-1/2 flex flex-row justify-start">
           <svg
+            class="blitzar"
             width="449"
             height="211"
             viewBox="0 0 449 211"
@@ -508,6 +518,7 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
+              class="path"
               d="M1 211V121.5H448.5V0.5"
               stroke="white"
             />
@@ -547,7 +558,9 @@
     </div>
   </div>
 </template>
+
 <script>
+import anime from 'animejs/lib/anime.es.js'
 export default {
   name: 'FrameworksDesktop',
   data() {
@@ -555,24 +568,46 @@ export default {
       planetar: true,
       magnetar: false,
       blitzar: false,
+      animateLineId: 'planetar',
     }
   },
   methods: {
     setPlanetar() {
+      this.animateLineId = 'planetar'
       this.planetar = true
       this.magnetar = false
       this.blitzar = false
+      this.animateLine()
     },
     setMagnetar() {
+      this.animateLineId = 'magnetar'
       this.planetar = false
       this.magnetar = true
       this.blitzar = false
+      this.animateLine()
     },
     setBlitzar() {
+      this.animateLineId = 'blitzar'
       this.planetar = false
       this.magnetar = false
       this.blitzar = true
+      this.animateLine()
+    },
+    animateLine() {
+      // const svgPath = document.querySelectorAll(`.${this.animateLineId} .path`)
+      const svgPath = document.getElementById('planetar-line')
+      console.log('path: ', svgPath)
+      anime({
+        targets: svgPath,
+        loop: true,
+        direction: 'normal',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 1000,
+      })
     },
   },
 }
 </script>
+<style scoped>
+</style>
