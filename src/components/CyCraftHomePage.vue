@@ -69,7 +69,7 @@
           />
           <Project
             title="UBI Calculator"
-            img="/cinematch.png"
+            img="/ubi.png"
             description="Ever wonder how you might benefit through a Universal Basic Income? The UBI Calculator is an ingenius plugin that allows a user to calculate their exact earnings with different UBI plans."
           />
           <Project

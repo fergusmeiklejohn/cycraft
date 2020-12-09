@@ -2,10 +2,10 @@
   <div>
     <div class="text-h2 text-left">Frameworks</div>
 
-    <div class="flex flex-row justify-between mt-12">
+    <div class="grid grid-cols-3 mt-12">
       <!-- Planetar -->
       <div
-        class="flex flex-col items-center cursor-pointer"
+        class="flex flex-col items-center cursor-pointer place-self-start"
         data="planetar"
         @click="setPlanetar"
       >
@@ -74,7 +74,7 @@
 
       <!-- Magnetar -->
       <div
-        class="flex flex-col items-center cursor-pointer"
+        class="flex flex-col items-center cursor-pointer place-self-center"
         data="magnetar"
         @click="setMagnetar"
       >
@@ -189,7 +189,7 @@
 
       <!-- Blitzar -->
       <div
-        class="flex flex-col items-center cursor-pointer"
+        class="flex flex-col items-center cursor-pointer place-self-end"
         data="blitzar"
         @click="setBlitzar"
       >
@@ -499,10 +499,10 @@
       <div class="flex flex-row">
         <div class="w-1/2">
         </div>
-        <div class="w-1/2 flex flex-row justify-start">
+        <div class="w-1/2 flex flex-row" style="padding-right: 90px">
           <svg
+            style="flex: 1"
             width="449"
-            height="211"
             viewBox="0 0 449 211"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
