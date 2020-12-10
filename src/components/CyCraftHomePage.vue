@@ -9,7 +9,7 @@
         <div class="flex items-center">
           <Monster />
         </div>
-        <!-- <button class="text-xl text-white" @click="clicked">Contact</button> -->
+        <!-- <button class="text-xl text-white" @click="contactUs">Contact</button> -->
       </div>
       <!-- Hero -->
       <div class="flex">
@@ -44,7 +44,7 @@
               id="1"
               data-text="CONTACT US"
               class="glitch"
-              @click="clicked"
+              @click="contactUs"
             >Contact Us</CyButton>
           </div>
         </div>
@@ -243,16 +243,20 @@
         </div>
       </div>
       <!-- Contact Us logo -->
-      <div class="mx-10 mt-20 pb-8">
+      <div class="mx-10 mt-20 pb-8 flex flex-col items-center">
         <a
           style="cursor: pointer"
-          @click="clicked"
+          @click="contactUs"
         >
           <img
             src="/Contact Us@2x.png"
             alt="Contact Us Button"
           />
         </a>
+        <div
+          v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
+          class="contact-us-underline"
+        ></div>
       </div>
       <!-- English or Japanese -->
       <div class="mx-10 mt-4 sm:mt-24 md:mt-32 flex-col justify-end">
@@ -268,14 +272,6 @@
         <p class="text-h3 text-center">
           &copy; 2020 CyCraft
         </p>
-        <div class="flex justify-center mt-4">
-          <div style="width: 14rem">
-            <CyButton
-              id="2"
-              @click="clicked"
-            >Terms &amp; Privacy</CyButton>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -289,6 +285,13 @@ import Project from './Project.vue'
 import FrameworksMobile from './FrameworksMobile.vue'
 import FrameworksDesktop from './FrameworksDesktop.vue'
 
+import anime from 'animejs/lib/anime.es.js'
+import Vue from 'vue'
+import VueWaypoint from 'vue-waypoint'
+
+// Waypoint plugin
+Vue.use(VueWaypoint)
+
 export default {
   name: 'CycraftHomePage',
   components: {
@@ -299,12 +302,47 @@ export default {
     FrameworksMobile,
     FrameworksDesktop,
   },
+  data: () => ({
+    intersectionOptions: {
+      root: null,
+      rootMargin: '0px 0px 0px 0px',
+      threshold: [0, 1],
+    }, // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+  }),
   methods: {
-    clicked() {
-      console.log('clicked')
+    contactUs() {
+      console.log('contact us')
     },
     toggled(value) {
       console.log('toggled: ', value)
+    },
+    animateContactUsUnderline() {
+      anime({
+        targets: '.contact-us-underline',
+        loop: false,
+        width: '100%', // -> from '5%' to '100%',
+        easing: 'easeInOutQuad',
+        duration: 1000,
+      })
+    },
+    undoAnimateContactUsUnderline() {
+      anime({
+        targets: '.contact-us-underline',
+        loop: false,
+        width: '5%', // -> from '100%' to '5%',
+        easing: 'easeInOutQuad',
+        duration: 1000,
+      })
+    },
+    onWaypoint({ going }) {
+      // going: in, out
+      if (going === this.$waypointMap.GOING_IN) {
+        this.animateContactUsUnderline()
+      }
+
+      if (going === this.$waypointMap.GOING_OUT) {
+        this.undoAnimateContactUsUnderline()
+      }
     },
   },
 }
@@ -333,4 +371,9 @@ export default {
 .line
   background: white
   height: 1px
+.contact-us-underline
+  background: white
+  height: 8px
+  width: 5%
+  margin-top: 24px
 </style>
