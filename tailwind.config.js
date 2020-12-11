@@ -15,6 +15,7 @@ module.exports = {
         'btn-light-green': '#E4FFE7',
         'btn-bright-green': '#22FF06',
       },
+      visibility: ['hover', 'focus'],
     },
   },
   variants: {},
