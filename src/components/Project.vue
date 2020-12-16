@@ -1,7 +1,7 @@
 <template>
   <div class="flex-col mb-8">
     <div class="pl-4 sm:pl-0 flex items-center mb-3">
-      <span class="text-h3 pr-4 whitespace-no-wrap">{{ title }}</span>
+      <span class="text-h3 pr-4 whitespace-nowrap">{{ title }}</span>
       <span class="line mr-4 sm:mr-0 w-full"></span>
     </div>
     <a

@@ -1,5 +1,10 @@
 <template>
   <div class="bg-black flex justify-center h-auto">
+    <ContactDialog
+      v-if="contact"
+      :active="contact"
+      @close="closeContact"
+    />
     <div
       class="flex-col min-width-full justify-center"
       style="max-width: 1100px"
@@ -140,7 +145,7 @@
         <div class="flex-col mt-8 pb-8">
           <div class="w-full md:w-5/6 sm:mt-10">
             <div class="flex items-center mb-4">
-              <span class="text-h3 pl-0 sm:pl-4 whitespace-no-wrap">Luca Ban</span>
+              <span class="text-h3 pl-0 sm:pl-4 whitespace-nowrap">Luca Ban</span>
               <span class="line ml-4 w-full"></span>
             </div>
             <div class="flex mt-2">
@@ -190,7 +195,7 @@
             <div class="w-full md:w-5/6 sm:mt-10">
               <div class="flex items-center mb-4">
                 <span class="line hidden sm:block mr-4 ml-4 w-full"></span>
-                <span class="text-h3 pr-0 sm:pr-4 whitespace-no-wrap">Tadaki Matsushita</span>
+                <span class="text-h3 pr-0 sm:pr-4 whitespace-nowrap">Tadaki Matsushita</span>
                 <span class="line block sm:hidden ml-4 w-full"></span>
 
               </div>
@@ -268,6 +273,7 @@ import CyButton from './CyButton.vue'
 import Project from './Project.vue'
 import FrameworksMobile from './FrameworksMobile.vue'
 import FrameworksDesktop from './FrameworksDesktop.vue'
+import ContactDialog from './ContactDialog.vue'
 
 import anime from 'animejs/lib/anime.es.js'
 import Vue from 'vue'
@@ -285,8 +291,10 @@ export default {
     Project,
     FrameworksMobile,
     FrameworksDesktop,
+    ContactDialog,
   },
   data: () => ({
+    contact: false,
     intersectionOptions: {
       root: null,
       rootMargin: '0px 0px 0px 0px',
@@ -295,7 +303,10 @@ export default {
   }),
   methods: {
     contactUs() {
-      console.log('contact us')
+      this.contact = true
+    },
+    closeContact() {
+      this.contact = false
     },
     toggled(value) {
       console.log('toggled: ', value)

@@ -51,7 +51,7 @@
         />
       </div>
     </div>
-    <Transition name="icon-fade">
+    <transition name="icon-fade">
       <div
         v-show="planetar"
         id="planetar"
@@ -112,8 +112,8 @@
 
         </div>
       </div>
-    </Transition>
-    <Transition name="icon-fade">
+    </transition>
+    <transition name="icon-fade">
       <div
         v-show="magnetar"
         id="magnetar"
@@ -285,8 +285,8 @@
 
         </div>
       </div>
-    </Transition>
-    <Transition name="icon-fade">
+    </transition>
+    <transition name="icon-fade">
       <div
         v-show="blitzar"
         class="mt-6"
@@ -344,7 +344,7 @@
           </div>
         </div>
       </div>
-    </Transition>
+    </transition>
   </div>
 </template>
 
