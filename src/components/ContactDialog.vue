@@ -31,7 +31,7 @@
       >
         <div
           v-show="active"
-          class="inline-block align-middle w-full bg-gray-900 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-sm sm:p-6"
+          class="inline-block align-middle w-full bg-gray-900 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform ease-in transition-all sm:my-8 sm:max-w-sm sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-headline"

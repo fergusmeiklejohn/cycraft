@@ -1,14 +1,11 @@
 <template>
   <div class="bg-black flex justify-center h-auto">
-    <transition
-      enter-active-class="ease-out duration-500"
-      enter-class="opacity-0"
-      enter-to-class="opacity-100"
-      leave-active-class="ease-out duration-400"
-      leave-class="opacity-100"
-      leave-to-class="opacity-0"
-    >
-      <ContactDialog v-show="contact" />
+    <transition name="fade">
+      <ContactDialog
+        v-show="contact"
+        :active="contact"
+        @close="closeContact"
+      />
     </transition>
     <div
       class="flex-col min-width-full justify-center"
@@ -300,6 +297,7 @@ export default {
     ContactDialog,
   },
   data: () => ({
+    show: false,
     contact: false,
     intersectionOptions: {
       root: null,
@@ -351,6 +349,13 @@ export default {
 
 <style lang="sass">
 @import './src/assets/typography.sass'
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity .5s ease
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+
 .landing-page-title
   +header-globals()
   font-style: normal
