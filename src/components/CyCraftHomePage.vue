@@ -1,10 +1,85 @@
 <template>
   <div class="bg-black flex justify-center h-auto">
-    <ContactDialog
-      v-if="contact"
-      :active="contact"
-      @close="closeContact"
-    />
+    <transition
+      enter-active-class="ease-out duration-500"
+      enter-class="opacity-0"
+      enter-to-class="opacity-100"
+      leave-active-class="ease-in duration-400"
+      leave-class="opacity-100"
+      leave-to-class="opacity-0"
+    >
+      <!-- Background overlay, show/hide based on modal state. -->
+
+      <div
+        v-show="contact"
+        class="fixed z-10 inset-0 overflow-y-auto"
+      >
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+
+          <div
+            class="fixed inset-0 transition-opacity"
+            aria-hidden="true"
+          >
+            <div
+              class="absolute inset-0 bg-gray-700 opacity-75"
+              @click="closeContact"
+            ></div>
+          </div>
+
+          <!-- This element is to trick the browser into centering the modal contents. -->
+          <span
+            class="hidden sm:inline-block sm:align-middle sm:h-screen"
+            aria-hidden="true"
+          >&#8203;</span>
+
+          <!-- Modal panel, show/hide based on modal state. -->
+          <transition
+            enter-active-class="ease-out duration-500"
+            enter-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            enter-to-class="opacity-100 translate-y-0 sm:scale-100"
+            leave-active-class="ease-in duration-400"
+            leave-class="opacity-100 translate-y-0 sm:scale-100"
+            leave-to-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          >
+            <div
+              v-show="contact"
+              class="inline-block align-bottom bg-gray-900 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-headline"
+            >
+              <div>
+                <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full">
+
+                  <img
+                    class="h-10 w-10"
+                    src="/cy-icon-white-on-black.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="mt-3 text-center sm:mt-5">
+                  <div class="mt-6">
+                    <CyButtonSimple>Gmail (Browser)</CyButtonSimple>
+                  </div>
+                  <div class="mt-2">
+                    <CyButtonSimple>Email (Default)</CyButtonSimple>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 sm:mt-6">
+                <button
+                  type="button"
+                  class="text-h5 inline-flex justify-center w-full border border-transparent shadow-sm px-4 py-2 bg-green-500 text-green-100 hover:bg-green-700 focus:outline-none"
+                  @click="closeContact"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </transition>
+        </div>
+      </div>
+    </transition>
     <div
       class="flex-col min-width-full justify-center"
       style="max-width: 1100px"
@@ -270,6 +345,7 @@
 import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
 import CyButton from './CyButton.vue'
+import CyButtonSimple from './CyButtonSimple.vue'
 import Project from './Project.vue'
 import FrameworksMobile from './FrameworksMobile.vue'
 import FrameworksDesktop from './FrameworksDesktop.vue'
@@ -288,10 +364,11 @@ export default {
     CyToggle,
     Monster,
     CyButton,
+    CyButtonSimple,
     Project,
     FrameworksMobile,
     FrameworksDesktop,
-    ContactDialog,
+    // ContactDialog,
   },
   data: () => ({
     contact: false,

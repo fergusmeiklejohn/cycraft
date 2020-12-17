@@ -1,31 +1,23 @@
 <template>
+  <!-- Background overlay, show/hide based on modal state. -->
+
   <div class="fixed z-10 inset-0 overflow-y-auto">
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
 
-      <!-- Background overlay, show/hide based on modal state. -->
-      <transition
-        enter-active-class="ease-out duration-400"
-        enter-class="opacity-0"
-        enter-to-class="opacity-100"
-        leave-active-class="ease-in duration-300"
-        leave-class="opacity-100"
-        leave-to-class="opacity-0"
+      <div
+        v-show="active"
+        class="fixed inset-0 transition-opacity"
+        aria-hidden="true"
       >
         <div
-          v-show="active"
-          class="fixed inset-0 transition-opacity"
-          aria-hidden="true"
-        >
-          <div
-            class="absolute inset-0 bg-gray-700 opacity-75"
-            @click="close"
-          ></div>
-        </div>
-      </transition>
+          class="absolute inset-0 bg-gray-700 opacity-75"
+          @click="close"
+        ></div>
+      </div>
 
       <!-- This element is to trick the browser into centering the modal contents. -->
       <span
-        class="hidden sm:inline-block sm:align-middle sm:h-screen"
+        class="hidden sm:inline-block align-middle h-screen"
         aria-hidden="true"
       >&#8203;</span>
 
@@ -56,17 +48,17 @@
             </div>
             <div class="mt-3 text-center sm:mt-5">
               <div class="mt-6">
-                <CyButton>Gmail (Browser)</CyButton>
+                <CyButtonSimple>Gmail (Browser)</CyButtonSimple>
               </div>
               <div class="mt-2">
-                <CyButton>Email (Default)</CyButton>
+                <CyButtonSimple>Email (Default)</CyButtonSimple>
               </div>
             </div>
           </div>
           <div class="mt-5 sm:mt-6">
             <button
               type="button"
-              class="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-500 text-base font-medium text-green-100 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-300 sm:text-sm"
+              class="text-h5 inline-flex justify-center w-full border border-transparent shadow-sm px-4 py-2 bg-green-500 text-green-100 hover:bg-green-700 focus:outline-none"
               @click="close"
             >
               Close
@@ -78,12 +70,14 @@
   </div>
 
 </template>
+
+
 <script>
-import CyButton from './CyButton'
+import CyButtonSimple from './CyButtonSimple'
 export default {
   name: 'ContactDialog',
   components: {
-    CyButton,
+    CyButtonSimple,
   },
   props: {
     active: {
