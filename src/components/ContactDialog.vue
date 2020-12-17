@@ -5,7 +5,6 @@
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
 
       <div
-        v-show="active"
         class="fixed inset-0 transition-opacity"
         aria-hidden="true"
       >
@@ -17,7 +16,7 @@
 
       <!-- This element is to trick the browser into centering the modal contents. -->
       <span
-        class="hidden sm:inline-block align-middle h-screen"
+        class="hidden sm:inline-block align-middle sm:h-screen"
         aria-hidden="true"
       >&#8203;</span>
 
@@ -32,7 +31,7 @@
       >
         <div
           v-show="active"
-          class="inline-block align-bottom bg-gray-900 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6"
+          class="inline-block align-middle w-full bg-gray-900 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-sm sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-headline"
@@ -48,10 +47,17 @@
             </div>
             <div class="mt-3 text-center sm:mt-5">
               <div class="mt-6">
-                <CyButtonSimple>Gmail (Browser)</CyButtonSimple>
+                <a
+                  href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=luca@cycraft.co&su=&cc&bcc&body&tf=1"
+                  target="_blank"
+                >
+                  <CyButtonSimple @click="close">Gmail (Browser)</CyButtonSimple>
+                </a>
               </div>
               <div class="mt-2">
-                <CyButtonSimple>Email (Default)</CyButtonSimple>
+                <a href="mailto:luca@cycraft.co">
+                  <CyButtonSimple @click="close">Email (Default)</CyButtonSimple>
+                </a>
               </div>
             </div>
           </div>
