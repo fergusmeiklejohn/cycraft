@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-h2 mx-4 text-left">Frameworks</div>
+    <div class="text-h2 mx-4 text-left">{{sectionTitle}}</div>
 
     <div class="flex flex-col justify-center space-y-20 mt-20">
       <!-- Planetar -->
@@ -14,7 +14,7 @@
           src="/planetar-name.svg"
           alt=""
         />
-        <div class="text-h4 mx-4 mt-8 text-center">This nimble Vue framework creates an auto-generated, living style guide.</div>
+        <div class="text-h4 mx-4 mt-8 text-center">{{planetarDescription}}</div>
       </div>
 
       <!-- Magnetar -->
@@ -28,7 +28,7 @@
           src="/magnetar-name.svg"
           alt=""
         />
-        <div class="text-h4 mx-4 mt-8 text-center">Magnetar is a framework-agnostic syncing solution that keeps your data where you need it.</div>
+        <div class="text-h4 mx-4 mt-8 text-center">{{magnetarDescription}}</div>
       </div>
 
       <!-- Blitzar -->
@@ -42,8 +42,31 @@
           src="/blitzar-name.svg"
           alt=""
         />
-        <div class="text-h4 mx-4 mt-8 text-center">A flexible component collection allowing for blitzing fast prototyping with VueJS.</div>
+        <div class="text-h4 mx-4 mt-8 text-center">{{blitzarDescription}}</div>
       </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+  name: 'FrameworkMobile',
+  props: {
+    sectionTitle: {
+      type: String,
+      default: 'Frameworks',
+    },
+    planetarDescription: {
+      type: String,
+      required: true,
+    },
+    magnetarDescription: {
+      type: String,
+      required: true,
+    },
+    blitzarDescription: {
+      type: String,
+      required: true,
+    },
+  },
+}
+</script>

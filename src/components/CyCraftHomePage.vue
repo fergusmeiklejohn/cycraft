@@ -35,13 +35,13 @@
             class="landing-page-title"
             style="max-width: 300px"
           >
-            We Craft without cruft.
+            {{pageTitle}}
           </div>
           <div
             class="landing-page-subtitle pt-6"
             style="max-width: 370px"
           >
-            We craft beautiful apps and strive for a better web.
+            {{pageSubTitle}}
           </div>
           <div
             class="mt-24 sm:mt-8 lg:mt-24"
@@ -52,7 +52,7 @@
               data-text="CONTACT US"
               class="glitch"
               @click="contactUs"
-            >Contact Us</CyButton>
+            >{{contactBtn}}</CyButton>
           </div>
         </div>
       </div>
@@ -60,47 +60,56 @@
       <div class="mx-0 sm:mx-10 mt-64">
         <!-- Section Title -->
         <div class="flex justify-start mb-6">
-          <div class="pl-4 sm:pl-0 text-h2">Our Projects</div>
+          <div class="pl-4 sm:pl-0 text-h2">{{projectsTitle}}</div>
         </div>
         <!-- Project Grid -->
         <div class="grid gap-10 md:gap-20 grid-cols-1">
           <Project
-            title="Pepicons"
+            :title="pepiconsTitle"
             img="/pepicons.png"
             url="https://pepicons.com/"
             link-text="pepicons.com"
-            description="Pepicons is a grand total of 118 hand-crafted icons — and counting! This completely original icon set is made in two retro variants: Pop! and Print. A live preview on the website allows you to play around with all the variations the icon pack has to offer."
+            :description="pepIconsDescription"
           />
           <Project
-            title="Cinematch"
+            :title="cinematchTitle"
             img="/cinematch.png"
             url="https://pepicons.com/"
             link-text="cinematch.com"
-            description="With the help of CineMatch a user can create film watchlists and share them with friends. This neat app has a clean user interface that organizes the user’s lists beautifully and with simplicity."
+            :description="cinematchDescription"
           />
           <Project
-            title="UBI Calculator"
+            :title="UBITitle"
             img="/ubi.png"
             url="https://pepicons.com/"
             link-text="ubi-calculator.com"
-            description="Ever wonder how you might benefit through a Universal Basic Income? The UBI Calculator is an ingenius plugin that allows a user to calculate their exact earnings with different UBI plans."
+            :description="UBICalculatorDescription"
           />
           <Project
-            title="Peer Learning"
+            :title="peerLearningTitle"
             img="/peer-learning.png"
             url="https://pepicons.com/"
             link-text="peer-learning.com"
-            description="PeerLearning is an online education software bringing students together to collaborate and learn from one another. Funded by education-focused grants, this software has the benefit of current user testing."
+            :description="peerLearningDescription"
           />
         </div>
       </div>
       <FrameworksMobile
         class="sm:hidden mt-24"
         style="margin-bottom: 23rem"
+        :section-title="frameworksSectionTitle"
+        :planetar-description="frameworkMobilePlanetarDescription"
+        :magnetar-description="frameworkMobileMagnetarDescription"
+        :blitzar-description="frameworkMobileBlitzarDescription"
       />
       <FrameworksDesktop
         class="hidden sm:block mt-64 mx-10"
         style="margin-bottom: 23rem"
+        :section-title="frameworksSectionTitle"
+        :planetar-description="frameworkDesktopPlanetarDescription"
+        :magnetar-description-design-title="frameworkDesktopMagnetarDescriptionTitle"
+        :magnetar-description="frameworkDesktopMagnetarDescription"
+        :blitzar-description="frameworkDesktopBlitzarDescription"
       />
       <!-- How we design and code -->
       <div class="mx-10">
@@ -110,7 +119,7 @@
             style="max-width: 403px"
           >
             <div class="flex pb-4">
-              <div class="text-h2">How we design</div>
+              <div class="text-h2">{{designTitle}}</div>
               <img
                 class="w-4 sm:w-6 ml-2"
                 src="/cy-icon-white-on-black.svg"
@@ -118,14 +127,14 @@
               />
             </div>
             <div class="text-h4">
-              With clarity and focus, we enable the user to engage with purpose.
+              {{designSubTitle}}
             </div>
           </div>
           <div class="mt-16 sm:mt-24 flex justify-end">
 
             <div style="max-width: 403px">
               <div class="flex pb-4 justify-end sm:justify-start">
-                <div class="text-h2">How we code</div>
+                <div class="text-h2">{{codeTitle}}</div>
                 <img
                   class="w-4 sm:w-6 ml-2"
                   src="/cy-icon-white-on-black.svg"
@@ -133,8 +142,7 @@
                 />
               </div>
               <div class="text-h4 text-right sm:text-left">
-                Matching the beauty of the design, our code is modern, concise,
-                and adaptive.
+                {{codeSubTitle}}
               </div>
             </div>
           </div>
@@ -142,12 +150,12 @@
       </div>
       <!-- About Us -->
       <div class="mx-10 pb-64 pt-20">
-        <div class="text-h2">About Us</div>
+        <div class="text-h2">{{aboutUs}}</div>
         <!-- Luca -->
         <div class="flex-col mt-8 pb-8">
           <div class="w-full md:w-5/6 sm:mt-10">
             <div class="flex items-center mb-4">
-              <span class="text-h3 pl-0 sm:pl-4 whitespace-nowrap">Luca Ban</span>
+              <span class="text-h3 pl-0 sm:pl-4 whitespace-nowrap">{{lucaName}}</span>
               <span class="line ml-4 w-full"></span>
             </div>
             <div class="flex mt-2">
@@ -158,9 +166,7 @@
               />
               <div class="flex-col pl-0 sm:pl-4 pr-0 sm:pr-24">
                 <p class="text-h4 ">
-                  Has been a technology enthusiast since birth. He thinks of
-                  writing code as nothing less than poetry. Believes everything
-                  is possible — talent is a skill you teach yourself.
+                  {{lucaBio}}
                 </p>
                 <div class="flex flex-wrap items-center mt-6">
                   <a
@@ -197,7 +203,7 @@
             <div class="w-full md:w-5/6 sm:mt-10">
               <div class="flex items-center mb-4">
                 <span class="line hidden sm:block mr-4 ml-4 w-full"></span>
-                <span class="text-h3 pr-0 sm:pr-4 whitespace-nowrap">Tadaki Matsushita</span>
+                <span class="text-h3 pr-0 sm:pr-4 whitespace-nowrap">{{tadakiName}}</span>
                 <span class="line block sm:hidden ml-4 w-full"></span>
 
               </div>
@@ -209,9 +215,7 @@
                 />
                 <div class="flex-col pl-0 sm:pl-24 pr-0 sm:pr-4">
                   <p class="text-h4">
-                    Self taught coder. He has helped companies all over Japan
-                    turn their vision into code. Excels at web marketing; and
-                    currently loves automation.
+                    {{tadakiBio}}
                   </p>
                   <div class="flex items-center mt-6">
 
@@ -299,12 +303,130 @@ export default {
   data: () => ({
     show: false,
     contact: false,
+    japanese: false,
     intersectionOptions: {
       root: null,
       rootMargin: '0px 0px 0px 0px',
       threshold: [0, 1],
     }, // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
   }),
+  computed: {
+    pageTitle() {
+      return this.japanese ? 'japanese' : 'We Craft without cruft.'
+    },
+    pageSubTitle() {
+      return this.japanese ? 'japanese' : 'We craft beautiful apps and strive for a better web.'
+    },
+    contactBtn() {
+      return this.japanese ? 'japanese' : 'Contact Us'
+    },
+    projectsTitle() {
+      return this.japanese ? 'japanese' : 'Our Projects'
+    },
+    pepIconsTitle() {
+      return this.japanese ? 'japanese' : 'Pepicons'
+    },
+    cinematchTitle() {
+      return this.japanese ? 'japanese' : 'Cinematch'
+    },
+    UBITitle() {
+      return this.japanese ? 'japanese' : 'UBI Calculator'
+    },
+    peerLearningTitle() {
+      return this.japanese ? 'japanese' : 'Peer Learning'
+    },
+    pepIconsDescription() {
+      return this.japanese
+        ? 'japanese'
+        : 'Pepicons is a grand total of 118 hand-crafted icons — and counting! This completely original icon set is made in two retro variants: Pop! and Print. A live preview on the website allows you to play around with all the variations the icon pack has to offer.'
+    },
+    cinematchDescription() {
+      return this.japanese
+        ? 'japanese'
+        : 'With the help of CineMatch a user can create film watchlists and share them with friends. This neat app has a clean user interface that organizes the user’s lists beautifully and with simplicity.'
+    },
+    UBICalculatorDescription() {
+      return this.japanese
+        ? 'japanese'
+        : 'Ever wonder how you might benefit through a Universal Basic Income? The UBI Calculator is an ingenius plugin that allows a user to calculate their exact earnings with different UBI plans.'
+    },
+    peerLearningDescription() {
+      return this.japanese
+        ? 'japanese'
+        : 'PeerLearning is an online education software bringing students together to collaborate and learn from one another. Funded by education-focused grants, this software has the benefit of current user testing.'
+    },
+    designTitle() {
+      return this.japanese ? 'japanese' : 'How we design'
+    },
+    designSubTitle() {
+      return this.japanese
+        ? 'japanese'
+        : 'With clarity and focus, we enable the user to engage with purpose.'
+    },
+    codeTitle() {
+      return this.japanese ? 'japanese' : 'How we code'
+    },
+    codeSubTitle() {
+      return this.japanese
+        ? 'japanese'
+        : 'Matching the beauty of the design, our code is modern, concise, and adaptive.'
+    },
+    aboutUs() {
+      return this.japanese ? 'japanese' : 'About Us'
+    },
+    lucaName() {
+      return this.japanese ? 'japanese' : 'Luca Ban'
+    },
+    lucaBio() {
+      return this.japanese
+        ? 'japanese'
+        : 'Has been a technology enthusiast since birth. He thinks of writing code as nothing less than poetry. Believes everything is possible — talent is a skill you teach yourself.'
+    },
+    tadakiName() {
+      return this.japanese ? 'japanese' : 'Tadaki Matsushita'
+    },
+    tadakiBio() {
+      return this.japanese
+        ? 'japanese'
+        : 'Self taught coder. He has helped companies all over Japan turn their vision into code. Excels at web marketing; and currently loves automation.'
+    },
+    frameworksSectionTitle() {
+      return this.japanese ? 'japanese' : 'Frameworks'
+    },
+    frameworkDesktopPlanetarDescription() {
+      return this.japanese
+        ? 'japanese'
+        : 'This nimble Vue framework creates an auto-generated, living style guide. The styleguide comes complete with an interactive component explorer that both developers and designers will love.'
+    },
+    frameworkDesktopMagnetarDescriptionTitle() {
+      return this.japanese ? 'japanese' : 'Your data, where you want.'
+    },
+    frameworkDesktopMagnetarDescription() {
+      return this.japanese
+        ? 'japanese'
+        : 'This framework-agnostic syncing solution can automatically connect to any DB or API and keep your data organised for you in a local data store. Plus, it’s got optimistic-UI built right in.'
+    },
+    frameworkDesktopBlitzarDescription() {
+      return this.japanese
+        ? 'japanese'
+        : 'Blitzar is a flexible component collection allowing for blitzing fast prototyping with VueJS.'
+    },
+    frameworkMobilePlanetarDescription() {
+      return this.japanese
+        ? 'japanese'
+        : 'This nimble Vue framework creates an auto-generated, living style guide.'
+    },
+    frameworkMobileMagnetarDescription() {
+      return this.japanese
+        ? 'japanese'
+        : 'Magnetar is a framework-agnostic syncing solution that keeps your data where you need it.'
+    },
+    frameworkMobileBlitzarDescription() {
+      return this.japanese
+        ? 'japanese'
+        : 'A flexible component collection allowing for blitzing fast prototyping with VueJS.'
+    },
+  },
   methods: {
     contactUs() {
       this.contact = true
@@ -313,7 +435,7 @@ export default {
       this.contact = false
     },
     toggled(value) {
-      console.log('toggled: ', value)
+      this.japanese = value
     },
     animateContactUsUnderline() {
       anime({

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-h2 text-left">Frameworks</div>
+    <div class="text-h2 text-left">{{sectionTitle}}</div>
 
     <div class="grid grid-cols-3 mt-12">
       <!-- Planetar -->
@@ -107,7 +107,7 @@
             <div
               class="text-body1 mt-4"
               style="width: 210px"
-            >This nimble Vue framework creates an auto-generated, living style guide. The styleguide comes complete with an interactive component explorer that both developers and designers will love. </div>
+            >{{planetarDescription}}</div>
           </div>
 
         </div>
@@ -273,14 +273,12 @@
             <div
               class="text-body1 mt-4"
               style="width: 210px"
-            >Your data, where you want.
+            >{{magnetarDescriptionTitle}}
             </div>
             <div
               class="text-body1 mt-4"
               style="width: 210px"
-            >
-              This framework-agnostic syncing solution can automatically connect to any DB or API and keep your data organised for you in a local data store.
-              Plus, it’s got optimistic-UI built right in.</div>
+            >{{magnetarDescription}}</div>
           </div>
 
         </div>
@@ -340,7 +338,7 @@
             <div
               class="text-body1 mt-4"
               style="width: 210px"
-            >Blitzar is a flexible component collection allowing for blitzing fast prototyping with VueJS.</div>
+            >{{blitzarDescription}}</div>
           </div>
         </div>
       </div>
@@ -352,6 +350,28 @@
 import anime from 'animejs/lib/anime.es.js'
 export default {
   name: 'FrameworksDesktop',
+  props: {
+    sectionTitle: {
+      type: String,
+      default: 'Frameworks',
+    },
+    planetarDescription: {
+      type: String,
+      required: true,
+    },
+    magnetarDescriptionTitle: {
+      type: String,
+      required: true,
+    },
+    magnetarDescription: {
+      type: String,
+      required: true,
+    },
+    blitzarDescription: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       planetar: true,
