@@ -12,13 +12,13 @@ export default {
   name: 'CyToggle',
   data() {
     return {
-      value: false,
+      isOn: false,
     }
   },
   methods: {
     toggle() {
-      this.value = !this.value
-      this.$emit('input', this.value)
+      this.isOn = !this.isOn
+      this.$emit('input', this.isOn)
     },
   },
 }
