@@ -107,7 +107,7 @@
         style="margin-bottom: 23rem"
         :section-title="frameworksSectionTitle"
         :planetar-description="frameworkDesktopPlanetarDescription"
-        :magnetar-description-design-title="frameworkDesktopMagnetarDescriptionTitle"
+        :magnetar-description-title="frameworkDesktopMagnetarDescriptionTitle"
         :magnetar-description="frameworkDesktopMagnetarDescription"
         :blitzar-description="frameworkDesktopBlitzarDescription"
       />
@@ -325,7 +325,7 @@ export default {
     projectsTitle() {
       return this.japanese ? 'japanese' : 'Our Projects'
     },
-    pepIconsTitle() {
+    pepiconsTitle() {
       return this.japanese ? 'japanese' : 'Pepicons'
     },
     cinematchTitle() {
