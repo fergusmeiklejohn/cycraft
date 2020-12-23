@@ -2,45 +2,47 @@
   <button
     type="button"
     aria-pressed="false"
-    :class="isOn ? 'bg-toggle-gray' : 'bg-black'"
-    class="relative inline-flex flex-shrink-0 h-7 w-12 border-2 border-white rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none"
+    :class="isOn ? 'bg-toggle-gray ease-out duration-100' : 'bg-black ease-in duration-100'"
+    class="relative inline-flex items-center flex-shrink-0 h-9 w-16 border-2 border-white rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none"
     @click="toggle"
   >
     <span class="sr-only">Use setting</span>
     <span
-      :class="isOn ? 'translate-x-6'  : 'translate-x-0'"
-      class="relative inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"
+      :class="isOn ? 'translate-x-8 bg-black ease-out duration-100'  : 'translate-x-1 bg-white ease-in duration-100'"
+      class="relative inline-block h-6 w-6 rounded-full shadow transform ring-0 transition ease-in-out duration-200"
     >
       <span
-        :class="isOn ? 'opacity-0 ease-out duration-100' : 'opacity-100 ease-in duration-200'"
+        :class="isOn ? 'opacity-0 ease-out duration-100' : 'opacity-100 ease-in duration-100'"
         class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
         aria-hidden="true"
       >
         <svg
-          class="h-3 w-3 text-gray-400"
+          class="h-4"
+          viewBox="0 0 21 19"
           fill="none"
-          viewBox="0 0 12 12"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M4 8l2-2m0 0l2-2M6 6L4 4m2 2l2 2"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            d="M13.942 3.89334V0.402344H3.50097V3.89334H0.0219727V14.3693H3.50097V18.1523H7.27197V14.3693H10.464V18.1523H14.235V14.3693H20.906V3.89334H13.942ZM10.754 11.1713H7.27197V7.67634H10.755L10.754 11.1713ZM17.425 11.1713H13.942V7.67634H17.422L17.425 11.1713Z"
+            fill="black"
           />
         </svg>
       </span>
       <span
-        :class="isOn ? 'opacity-100 ease-in duration-200' : 'opacity-0 ease-out duration-100'"
+        :class="isOn ? 'opacity-100 ease-in duration-100' : 'opacity-0 ease-out duration-100'"
         class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
         aria-hidden="true"
       >
         <svg
-          class="h-3 w-3 text-indigo-600"
-          fill="currentColor"
-          viewBox="0 0 12 12"
+          class="h-4"
+          viewBox="0 0 14 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M3.707 5.293a1 1 0 00-1.414 1.414l1.414-1.414zM5 8l-.707.707a1 1 0 001.414 0L5 8zm4.707-3.293a1 1 0 00-1.414-1.414l1.414 1.414zm-7.414 2l2 2 1.414-1.414-2-2-1.414 1.414zm3.414 2l4-4-1.414-1.414-4 4 1.414 1.414z" />
+          <path
+            d="M9.35497 2.93802V0.822021H3.02697V2.93802H0.917969V9.28802H3.02697V11.581H5.31197V9.28702H7.24697V11.58H9.53197V9.28702H13.575V2.93802H9.35497ZM7.42297 7.34902H5.31197V5.23102H7.42297V7.34902ZM11.466 7.34902H9.35497V5.23102H11.466V7.34902Z"
+            fill="white"
+          />
         </svg>
       </span>
     </span>
