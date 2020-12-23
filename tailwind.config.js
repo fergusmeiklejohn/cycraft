@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         'btn-light-green': '#E4FFE7',
         'btn-bright-green': '#22FF06',
+        'toggle-gray': '#7c7c7c',
       },
       visibility: ['hover', 'focus'],
     },
