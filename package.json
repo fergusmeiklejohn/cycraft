@@ -12,6 +12,7 @@
     "animejs": "^3.2.1",
     "autoprefixer": "^9",
     "core-js": "^3.6.5",
+    "lottie-web": "^5.7.5",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue": "^2.6.11"

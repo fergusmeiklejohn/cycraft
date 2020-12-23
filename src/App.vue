@@ -1,52 +1,55 @@
 <template>
-  <div
-    id="app"
-    class="bg-black flex justify-center"
-  >
-    <!-- Left glitches descending order -->
-    <img
-      src="/SideGlitchAlt3.png"
-      class="side-glitch-1 blink-image-1"
-      :class="{ showSideGlitch: !scrolling }"
+  <div class="h-full w-full">
+    <LoadingAnimation v-if="loading" />
+    <div
+      v-else
+      id="app"
+      class="bg-black flex justify-center"
     >
-    <img
-      src="/SideGlitchAlt1.png"
-      class="side-glitch-2 blink-image-3"
-      :class="{ showSideGlitch: !scrolling }"
-    >
-    <img
-      src="/SideGlitchAlt2.png"
-      class="side-glitch-3 blink-image-2"
-      :class="{ showSideGlitch: !scrolling }"
-    >
-    <img
-      src="/SideGlitchAlt4.png"
-      class="side-glitch-4 blink-image-3"
-      :class="{ showSideGlitch: !scrolling }"
-    >
-    <!-- Right glitches descending order -->
-    <img
-      src="/SideGlitchAlt5.png"
-      class="side-glitch-5 blink-image-2"
-      :class="{ showSideGlitch: !scrolling }"
-    >
-    <img
-      src="/SideGlitchAlt6.png"
-      class="side-glitch-6 blink-image-1"
-      :class="{ showSideGlitch: !scrolling }"
-    >
-    <img
-      src="/SideGlitchAlt7.png"
-      class="side-glitch-7 blink-image 3"
-      :class="{ showSideGlitch: !scrolling }"
-    >
-    <img
-      src="/SideGlitchAlt8.png"
-      class="side-glitch-8 blink-image-1"
-      :class="{ showSideGlitch: !scrolling }"
-    >
-
-    <CyCraftHomePage />
+      <!-- Left glitches descending order -->
+      <img
+        src="/SideGlitchAlt3.png"
+        class="side-glitch-1 blink-image-1"
+        :class="{ showSideGlitch: !scrolling }"
+      >
+      <img
+        src="/SideGlitchAlt1.png"
+        class="side-glitch-2 blink-image-3"
+        :class="{ showSideGlitch: !scrolling }"
+      >
+      <img
+        src="/SideGlitchAlt2.png"
+        class="side-glitch-3 blink-image-2"
+        :class="{ showSideGlitch: !scrolling }"
+      >
+      <img
+        src="/SideGlitchAlt4.png"
+        class="side-glitch-4 blink-image-3"
+        :class="{ showSideGlitch: !scrolling }"
+      >
+      <!-- Right glitches descending order -->
+      <img
+        src="/SideGlitchAlt5.png"
+        class="side-glitch-5 blink-image-2"
+        :class="{ showSideGlitch: !scrolling }"
+      >
+      <img
+        src="/SideGlitchAlt6.png"
+        class="side-glitch-6 blink-image-1"
+        :class="{ showSideGlitch: !scrolling }"
+      >
+      <img
+        src="/SideGlitchAlt7.png"
+        class="side-glitch-7 blink-image 3"
+        :class="{ showSideGlitch: !scrolling }"
+      >
+      <img
+        src="/SideGlitchAlt8.png"
+        class="side-glitch-8 blink-image-1"
+        :class="{ showSideGlitch: !scrolling }"
+      >
+      <CyCraftHomePage />
+    </div>
   </div>
 </template>
 
@@ -80,15 +83,18 @@ var scrollStop = function (callback) {
   )
 }
 import CyCraftHomePage from './components/CyCraftHomePage.vue'
+import LoadingAnimation from './components/LoadingAnimation.vue'
 
 export default {
   name: 'App',
   components: {
     CyCraftHomePage,
+    LoadingAnimation,
   },
   data() {
     return {
       scrolling: false,
+      loading: true,
     }
   },
   computed: {},
@@ -109,6 +115,7 @@ export default {
 <style lang="sass">
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap')
 @import './assets/styles.css'
+
 body
   overscroll-behavior-y: none
   overscroll-behavior-x: none
