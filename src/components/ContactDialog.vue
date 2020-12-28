@@ -57,7 +57,7 @@
               <img
                 v-else
                 class="h-10 w-10"
-                src="/cy-icon-white-on-black.svg"
+                src="/cy-icon-white.svg"
                 alt=""
               />
             </div>

@@ -3,23 +3,28 @@
     <div
       id="loading-animation"
       class="w-auto bg-black"
-    ></div>
+    >
+      <img
+        src="cycraft-loading-min.gif"
+        alt="loading animation"
+      >
+    </div>
   </div>
 </template>
 <script>
 import lottie from 'lottie-web'
 export default {
   name: 'LoadingAnimation',
-  mounted() {
-    let loadingContainer = document.getElementById('loading-animation')
-    console.log(loadingContainer)
-    lottie.loadAnimation({
-      container: loadingContainer,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: `./animation/data.json`,
-    })
-  },
+  //Commented out until we recieve working Lottie animation .json file
+  // mounted() {
+  //   let loadingContainer = document.getElementById('loading-animation')
+  //   lottie.loadAnimation({
+  //     container: loadingContainer,
+  //     renderer: 'svg',
+  //     loop: true,
+  //     autoplay: true,
+  //     path: `./animation/data.json`,
+  //   })
+  // },
 }
 </script>
