@@ -57,7 +57,7 @@
         </div>
       </div>
       <!-- Projects Section -->
-      <div class="mx-0 sm:mx-10 mt-64">
+      <div class="mx-0 sm:mx-10 mt-48 sm:mt-64">
         <!-- Section Title -->
         <div class="flex justify-start mb-6">
           <div class="pl-4 sm:pl-0 text-h2">{{projectsTitle}}</div>
@@ -103,7 +103,7 @@
         :blitzar-description="frameworkMobileBlitzarDescription"
       />
       <FrameworksDesktop
-        class="hidden sm:block mt-64 mx-10"
+        class="hidden sm:block mt-72 mx-10"
         style="margin-bottom: 23rem"
         :section-title="frameworksSectionTitle"
         :planetar-description="frameworkDesktopPlanetarDescription"
@@ -149,13 +149,13 @@
         </div>
       </div>
       <!-- About Us -->
-      <div class="mx-10 pb-64 pt-20">
+      <div class="mx-10 mt-72">
         <div class="text-h2">{{aboutUs}}</div>
         <!-- Luca -->
         <div class="flex-col mt-8 pb-8">
           <div class="w-full md:w-5/6 sm:mt-10">
             <div class="flex items-center mb-4">
-              <span class="text-h3 pl-0 sm:pl-4 whitespace-nowrap">{{lucaName}}</span>
+              <span class="text-h3 whitespace-nowrap">{{lucaName}}</span>
               <span class="line ml-4 w-full"></span>
             </div>
             <div class="flex mt-2">
@@ -203,7 +203,7 @@
             <div class="w-full md:w-5/6 sm:mt-10">
               <div class="flex items-center mb-4">
                 <span class="line hidden sm:block mr-4 ml-4 w-full"></span>
-                <span class="text-h3 pr-0 sm:pr-4 whitespace-nowrap">{{tadakiName}}</span>
+                <span class="text-h3 whitespace-nowrap">{{tadakiName}}</span>
                 <span class="line block sm:hidden ml-4 w-full"></span>
 
               </div>
@@ -238,7 +238,7 @@
         </div>
       </div>
       <!-- Contact Us logo -->
-      <div class="mx-10 mt-20 pb-8 flex flex-col items-center">
+      <div class="mx-10 mt-48 sm:mt-72 pb-8 flex flex-col items-center">
         <a
           style="cursor: pointer"
           @click="contactUs"
