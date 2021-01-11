@@ -171,7 +171,6 @@
                 <div class="flex flex-wrap items-center mt-6">
                   <a
                     href="https://twitter.com/Mesqueeb"
-                    target="_blank"
                     class="flex items-center lg:mr-5"
                   >
                     <img
@@ -183,7 +182,6 @@
                   </a>
                   <a
                     href="https://github.com/mesqueeb"
-                    target="_blank"
                     class="flex items-center"
                   >
                     <img
@@ -221,7 +219,6 @@
 
                     <a
                       href="https://github.com/mesqueeb"
-                      target="_blank"
                       class="flex items-center"
                     >
                       <img
