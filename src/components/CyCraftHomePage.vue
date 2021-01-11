@@ -164,7 +164,7 @@
                 src="/martin.jpg"
                 alt="Avatar"
               />
-              <div class="flex-col pl-0 sm:pl-4 pr-0 sm:pr-24">
+              <div class="flex-col pl-0 sm:pl-4 pr-0 sm:pr-8 md:pr-12 lg:pr-24">
                 <p class="text-h4 ">
                   {{lucaBio}}
                 </p>
@@ -172,14 +172,14 @@
                   <a
                     href="https://twitter.com/Mesqueeb"
                     target="_blank"
-                    class="flex items-center"
+                    class="flex items-center lg:mr-5"
                   >
                     <img
                       class="h-6 sm:h-12"
                       src="/Twitter_Logo.svg"
                       alt="Twitter Logo"
                     />
-                    <p class="text-h3 ml-1 mr-6">Twitter</p>
+                    <p class="text-h4 ml-1 mr-6">Twitter</p>
                   </a>
                   <a
                     href="https://github.com/mesqueeb"
@@ -190,7 +190,7 @@
                       class="h-4 sm:h-8"
                       src="/Github_Mark.svg"
                     />
-                    <p class="text-h3 ml-3">Github</p>
+                    <p class="text-h4 ml-3">Github</p>
                   </a>
                 </div>
               </div>
@@ -213,7 +213,7 @@
                   src="/martin.jpg"
                   alt="Avatar"
                 />
-                <div class="flex-col pl-0 sm:pl-24 pr-0 sm:pr-4">
+                <div class="flex-col pl-0 pr-0  sm:pl-8 md:pl-12 lg:pl-24 sm:pr-4">
                   <p class="text-h4">
                     {{tadakiBio}}
                   </p>
@@ -228,7 +228,7 @@
                         class="h-4 sm:h-8"
                         src="/Github_Mark.svg"
                       />
-                      <p class="text-h3 ml-3">Github</p>
+                      <p class="text-h4 ml-3">Github</p>
                     </a>
                   </div>
                 </div>
