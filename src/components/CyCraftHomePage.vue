@@ -121,8 +121,8 @@
             <div class="flex pb-4">
               <div class="text-h2">{{designTitle}}</div>
               <img
-                class="w-4 sm:w-6 ml-2"
-                src="/cy-icon-white-on-black.svg"
+                class="w-5 ml-2 sm:w-10 sm:ml-6"
+                src="/cy-icon-white.svg"
                 alt=""
               />
             </div>
@@ -136,8 +136,8 @@
               <div class="flex pb-4 justify-end sm:justify-start">
                 <div class="text-h2">{{codeTitle}}</div>
                 <img
-                  class="w-4 sm:w-6 ml-2"
-                  src="/cy-icon-white-on-black.svg"
+                  class="w-5 ml-2 sm:w-10 sm:ml-6"
+                  src="/cy-icon-white.svg"
                   alt=""
                 />
               </div>
