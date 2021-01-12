@@ -4,9 +4,12 @@
       <span class="text-h3 pr-4 whitespace-nowrap">{{ title }}</span>
       <span class="line mr-4 sm:mr-0 w-full"></span>
     </div>
+
+    <!-- desktop overlay -->
     <a
       :href="url"
       target="_blank"
+      class="hidden sm:block"
     >
       <div class="relative mx-auto">
         <img
@@ -30,9 +33,47 @@
           </div>
         </div>
       </div>
+      <div class="text-h4 pt-4 px-4 sm:pt-8 sm:px-0">{{description}}</div>
     </a>
+
+    <!-- mobile overlay -->
+    <div class="relative mx-auto block sm:hidden">
+      <img
+        class="h-full w-full"
+        :src="img"
+        alt="Project Photo"
+      />
+      <div
+        class="absolute flex flex-col justify-center items-center top-0 h-full w-full bg-black opacity-0 hover:opacity-75 transition duration-300 ease-in-out"
+        @click.stop="clicked = true"
+      >
+        <a
+          :href="url"
+          target="_blank"
+          class="block sm:hidden"
+        >
+          <div
+            v-if="clicked"
+            class="text-center flex flex-row items-center"
+          >
+            <div class="text-h3 inline-block">
+
+              {{linkText}}
+            </div>
+            <img
+              class="inline-block ml-3"
+              style="height: 12px"
+              src="/external-link.svg"
+              alt=""
+            />
+
+          </div>
+        </a>
+      </div>
+    </div>
     <div class="text-h4 pt-4 px-4 sm:pt-8 sm:px-0">{{description}}</div>
   </div>
+
 </template>
 <script>
 export default {
@@ -62,6 +103,11 @@ export default {
       type: String,
       required: true,
     },
+  },
+  data() {
+    return {
+      clicked: false,
+    }
   },
 }
 </script>
