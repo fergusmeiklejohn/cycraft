@@ -282,6 +282,7 @@ import ContactDialog from './ContactDialog.vue'
 import anime from 'animejs/lib/anime.es.js'
 import Vue from 'vue'
 import VueWaypoint from 'vue-waypoint'
+import smoothscroll from 'smoothscroll-polyfill'
 
 // Waypoint plugin
 Vue.use(VueWaypoint)
@@ -297,6 +298,7 @@ export default {
     FrameworksDesktop,
     ContactDialog,
   },
+
   data: () => ({
     show: false,
     contact: false,
@@ -307,6 +309,7 @@ export default {
       threshold: [0, 1],
     }, // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
   }),
+
   computed: {
     pageTitle() {
       return this.japanese ? 'japanese' : 'We Craft without cruft.'
@@ -426,6 +429,9 @@ export default {
         : 'A flexible component collection allowing for blitzing fast prototyping with VueJS.'
     },
   },
+  mounted(){
+    smoothscroll.polyfill()
+  },
   methods: {
     contactUs() {
       this.contact = true
@@ -435,6 +441,11 @@ export default {
     },
     toggled(value) {
       this.japanese = value
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      })
     },
     animateContactUsUnderline() {
       anime({
